@@ -1,595 +1,397 @@
-REF_DATE,GEO,Labour force characteristics,Sex,Age group,UOM,UOM_ID,SCALAR_FACTOR,SCALAR_ID,VALUE,DECIMALS
-2019-01,Canada,Population,Both sexes,15 years and over,Persons,249,thousands,3,30526.6,1
-2019-01,Canada,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,20053.8,1
-2019-01,Canada,Employment,Both sexes,15 years and over,Persons,249,thousands,3,18891.4,1
-2019-01,Canada,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,15295.5,1
-2019-01,Canada,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3595.9,1
-2019-01,Canada,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,1162.4,1
-2019-01,Canada,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.8,1
-2019-01,Canada,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.7,1
-2019-01,Canada,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.9,1
-2019-01,Newfoundland and Labrador,Population,Both sexes,15 years and over,Persons,249,thousands,3,441.9,1
-2019-01,Newfoundland and Labrador,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,262.2,1
-2019-01,Newfoundland and Labrador,Employment,Both sexes,15 years and over,Persons,249,thousands,3,232.3,1
-2019-01,Newfoundland and Labrador,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,196.7,1
-2019-01,Newfoundland and Labrador,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,35.5,1
-2019-01,Newfoundland and Labrador,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,29.9,1
-2019-01,Newfoundland and Labrador,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,11.4,1
-2019-01,Newfoundland and Labrador,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,59.3,1
-2019-01,Newfoundland and Labrador,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,52.6,1
-2019-01,Prince Edward Island,Population,Both sexes,15 years and over,Persons,249,thousands,3,126.9,1
-2019-01,Prince Edward Island,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,83.6,1
-2019-01,Prince Edward Island,Employment,Both sexes,15 years and over,Persons,249,thousands,3,75.5,1
-2019-01,Prince Edward Island,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,64.3,1
-2019-01,Prince Edward Island,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,11.2,1
-2019-01,Prince Edward Island,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,8,1
-2019-01,Prince Edward Island,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,9.6,1
-2019-01,Prince Edward Island,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.9,1
-2019-01,Prince Edward Island,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,59.5,1
-2019-01,Nova Scotia,Population,Both sexes,15 years and over,Persons,249,thousands,3,803,1
-2019-01,Nova Scotia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,499.2,1
-2019-01,Nova Scotia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,465.6,1
-2019-01,Nova Scotia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,381.1,1
-2019-01,Nova Scotia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,84.6,1
-2019-01,Nova Scotia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,33.6,1
-2019-01,Nova Scotia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,6.7,1
-2019-01,Nova Scotia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,62.2,1
-2019-01,Nova Scotia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,58,1
-2019-01,New Brunswick,Population,Both sexes,15 years and over,Persons,249,thousands,3,628.9,1
-2019-01,New Brunswick,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,387,1
-2019-01,New Brunswick,Employment,Both sexes,15 years and over,Persons,249,thousands,3,355.6,1
-2019-01,New Brunswick,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,303.8,1
-2019-01,New Brunswick,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,51.8,1
-2019-01,New Brunswick,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,31.4,1
-2019-01,New Brunswick,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,8.1,1
-2019-01,New Brunswick,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,61.5,1
-2019-01,New Brunswick,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,56.5,1
-2019-01,Quebec,Population,Both sexes,15 years and over,Persons,249,thousands,3,7023.3,1
-2019-01,Quebec,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,4547.1,1
-2019-01,Quebec,Employment,Both sexes,15 years and over,Persons,249,thousands,3,4304.2,1
-2019-01,Quebec,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3494.5,1
-2019-01,Quebec,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,809.7,1
-2019-01,Quebec,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,242.9,1
-2019-01,Quebec,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.3,1
-2019-01,Quebec,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.7,1
-2019-01,Quebec,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.3,1
-2019-01,Ontario,Population,Both sexes,15 years and over,Persons,249,thousands,3,12021.3,1
-2019-01,Ontario,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,7797.7,1
-2019-01,Ontario,Employment,Both sexes,15 years and over,Persons,249,thousands,3,7349.1,1
-2019-01,Ontario,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,5976.7,1
-2019-01,Ontario,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1372.4,1
-2019-01,Ontario,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,448.6,1
-2019-01,Ontario,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.8,1
-2019-01,Ontario,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.9,1
-2019-01,Ontario,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.1,1
-2019-01,Manitoba,Population,Both sexes,15 years and over,Persons,249,thousands,3,1031.2,1
-2019-01,Manitoba,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,696.1,1
-2019-01,Manitoba,Employment,Both sexes,15 years and over,Persons,249,thousands,3,657.5,1
-2019-01,Manitoba,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,526.9,1
-2019-01,Manitoba,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,130.6,1
-2019-01,Manitoba,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,38.6,1
-2019-01,Manitoba,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.5,1
-2019-01,Manitoba,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,67.5,1
-2019-01,Manitoba,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,63.8,1
-2019-01,Saskatchewan,Population,Both sexes,15 years and over,Persons,249,thousands,3,887.5,1
-2019-01,Saskatchewan,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,610.9,1
-2019-01,Saskatchewan,Employment,Both sexes,15 years and over,Persons,249,thousands,3,576.7,1
-2019-01,Saskatchewan,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,472,1
-2019-01,Saskatchewan,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,104.8,1
-2019-01,Saskatchewan,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,34.1,1
-2019-01,Saskatchewan,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.6,1
-2019-01,Saskatchewan,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,68.8,1
-2019-01,Saskatchewan,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,65,1
-2019-01,Alberta,Population,Both sexes,15 years and over,Persons,249,thousands,3,3498.9,1
-2019-01,Alberta,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2497.6,1
-2019-01,Alberta,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2327.8,1
-2019-01,Alberta,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1907.2,1
-2019-01,Alberta,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,420.6,1
-2019-01,Alberta,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,169.8,1
-2019-01,Alberta,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,6.8,1
-2019-01,Alberta,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,71.4,1
-2019-01,Alberta,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,66.5,1
-2019-01,British Columbia,Population,Both sexes,15 years and over,Persons,249,thousands,3,4063.7,1
-2019-01,British Columbia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2672.5,1
-2019-01,British Columbia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2547.1,1
-2019-01,British Columbia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1972.3,1
-2019-01,British Columbia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,574.8,1
-2019-01,British Columbia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,125.3,1
-2019-01,British Columbia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,4.7,1
-2019-01,British Columbia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.8,1
-2019-01,British Columbia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,62.7,1
-2019-05,Canada,Population,Both sexes,15 years and over,Persons,249,thousands,3,30662.4,1
-2019-05,Canada,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,20142.7,1
-2019-05,Canada,Employment,Both sexes,15 years and over,Persons,249,thousands,3,19050.4,1
-2019-05,Canada,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,15439.5,1
-2019-05,Canada,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3610.9,1
-2019-05,Canada,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,1092.3,1
-2019-05,Canada,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.4,1
-2019-05,Canada,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.7,1
-2019-05,Canada,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,62.1,1
-2019-05,Newfoundland and Labrador,Population,Both sexes,15 years and over,Persons,249,thousands,3,440.9,1
-2019-05,Newfoundland and Labrador,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,258.4,1
-2019-05,Newfoundland and Labrador,Employment,Both sexes,15 years and over,Persons,249,thousands,3,226.2,1
-2019-05,Newfoundland and Labrador,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,194.5,1
-2019-05,Newfoundland and Labrador,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,31.8,1
-2019-05,Newfoundland and Labrador,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,32.2,1
-2019-05,Newfoundland and Labrador,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,12.5,1
-2019-05,Newfoundland and Labrador,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,58.6,1
-2019-05,Newfoundland and Labrador,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,51.3,1
-2019-05,Prince Edward Island,Population,Both sexes,15 years and over,Persons,249,thousands,3,128.1,1
-2019-05,Prince Edward Island,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,84.9,1
-2019-05,Prince Edward Island,Employment,Both sexes,15 years and over,Persons,249,thousands,3,77.3,1
-2019-05,Prince Edward Island,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,65.5,1
-2019-05,Prince Edward Island,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,11.7,1
-2019-05,Prince Edward Island,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,7.6,1
-2019-05,Prince Edward Island,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,9,1
-2019-05,Prince Edward Island,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66.3,1
-2019-05,Prince Edward Island,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,60.3,1
-2019-05,Nova Scotia,Population,Both sexes,15 years and over,Persons,249,thousands,3,805.1,1
-2019-05,Nova Scotia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,502.3,1
-2019-05,Nova Scotia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,468.8,1
-2019-05,Nova Scotia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,381.1,1
-2019-05,Nova Scotia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,87.7,1
-2019-05,Nova Scotia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,33.5,1
-2019-05,Nova Scotia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,6.7,1
-2019-05,Nova Scotia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,62.4,1
-2019-05,Nova Scotia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,58.2,1
-2019-05,New Brunswick,Population,Both sexes,15 years and over,Persons,249,thousands,3,630.3,1
-2019-05,New Brunswick,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,386.9,1
-2019-05,New Brunswick,Employment,Both sexes,15 years and over,Persons,249,thousands,3,358.4,1
-2019-05,New Brunswick,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,303.8,1
-2019-05,New Brunswick,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,54.5,1
-2019-05,New Brunswick,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,28.6,1
-2019-05,New Brunswick,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.4,1
-2019-05,New Brunswick,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,61.4,1
-2019-05,New Brunswick,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,56.9,1
-2019-05,Quebec,Population,Both sexes,15 years and over,Persons,249,thousands,3,7040.7,1
-2019-05,Quebec,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,4554.4,1
-2019-05,Quebec,Employment,Both sexes,15 years and over,Persons,249,thousands,3,4327.9,1
-2019-05,Quebec,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3514.3,1
-2019-05,Quebec,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,813.5,1
-2019-05,Quebec,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,226.6,1
-2019-05,Quebec,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5,1
-2019-05,Quebec,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.7,1
-2019-05,Quebec,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.5,1
-2019-05,Ontario,Population,Both sexes,15 years and over,Persons,249,thousands,3,12093.3,1
-2019-05,Ontario,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,7844.6,1
-2019-05,Ontario,Employment,Both sexes,15 years and over,Persons,249,thousands,3,7435.4,1
-2019-05,Ontario,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,6051.5,1
-2019-05,Ontario,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1383.9,1
-2019-05,Ontario,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,409.2,1
-2019-05,Ontario,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.2,1
-2019-05,Ontario,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.9,1
-2019-05,Ontario,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.5,1
-2019-05,Manitoba,Population,Both sexes,15 years and over,Persons,249,thousands,3,1035.2,1
-2019-05,Manitoba,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,689.3,1
-2019-05,Manitoba,Employment,Both sexes,15 years and over,Persons,249,thousands,3,654.2,1
-2019-05,Manitoba,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,522.5,1
-2019-05,Manitoba,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,131.7,1
-2019-05,Manitoba,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,35.1,1
-2019-05,Manitoba,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.1,1
-2019-05,Manitoba,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66.6,1
-2019-05,Manitoba,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,63.2,1
-2019-05,Saskatchewan,Population,Both sexes,15 years and over,Persons,249,thousands,3,888.6,1
-2019-05,Saskatchewan,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,611.6,1
-2019-05,Saskatchewan,Employment,Both sexes,15 years and over,Persons,249,thousands,3,579.5,1
-2019-05,Saskatchewan,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,476.4,1
-2019-05,Saskatchewan,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,103,1
-2019-05,Saskatchewan,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,32.1,1
-2019-05,Saskatchewan,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.2,1
-2019-05,Saskatchewan,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,68.8,1
-2019-05,Saskatchewan,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,65.2,1
-2019-05,Alberta,Population,Both sexes,15 years and over,Persons,249,thousands,3,3516.2,1
-2019-05,Alberta,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2516,1
-2019-05,Alberta,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2346.9,1
-2019-05,Alberta,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1912.9,1
-2019-05,Alberta,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,434,1
-2019-05,Alberta,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,169,1
-2019-05,Alberta,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,6.7,1
-2019-05,Alberta,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,71.6,1
-2019-05,Alberta,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,66.7,1
-2019-05,British Columbia,Population,Both sexes,15 years and over,Persons,249,thousands,3,4084,1
-2019-05,British Columbia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2694.3,1
-2019-05,British Columbia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2575.8,1
-2019-05,British Columbia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,2017,1
-2019-05,British Columbia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,558.9,1
-2019-05,British Columbia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,118.5,1
-2019-05,British Columbia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,4.4,1
-2019-05,British Columbia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66,1
-2019-05,British Columbia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,63.1,1
-2019-09,Canada,Population,Both sexes,15 years and over,Persons,249,thousands,3,30854.9,1
-2019-09,Canada,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,20263.2,1
-2019-09,Canada,Employment,Both sexes,15 years and over,Persons,249,thousands,3,19154.9,1
-2019-09,Canada,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,15541.9,1
-2019-09,Canada,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3613,1
-2019-09,Canada,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,1108.4,1
-2019-09,Canada,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.5,1
-2019-09,Canada,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.7,1
-2019-09,Canada,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,62.1,1
-2019-09,Newfoundland and Labrador,Population,Both sexes,15 years and over,Persons,249,thousands,3,439.9,1
-2019-09,Newfoundland and Labrador,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,253.5,1
-2019-09,Newfoundland and Labrador,Employment,Both sexes,15 years and over,Persons,249,thousands,3,224.7,1
-2019-09,Newfoundland and Labrador,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,191.5,1
-2019-09,Newfoundland and Labrador,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,33.2,1
-2019-09,Newfoundland and Labrador,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,28.8,1
-2019-09,Newfoundland and Labrador,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,11.4,1
-2019-09,Newfoundland and Labrador,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,57.6,1
-2019-09,Newfoundland and Labrador,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,51.1,1
-2019-09,Prince Edward Island,Population,Both sexes,15 years and over,Persons,249,thousands,3,129.7,1
-2019-09,Prince Edward Island,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,86.4,1
-2019-09,Prince Edward Island,Employment,Both sexes,15 years and over,Persons,249,thousands,3,79,1
-2019-09,Prince Edward Island,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,67.3,1
-2019-09,Prince Edward Island,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,11.8,1
-2019-09,Prince Edward Island,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,7.4,1
-2019-09,Prince Edward Island,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,8.6,1
-2019-09,Prince Edward Island,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66.6,1
-2019-09,Prince Edward Island,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,60.9,1
-2019-09,Nova Scotia,Population,Both sexes,15 years and over,Persons,249,thousands,3,809.8,1
-2019-09,Nova Scotia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,503.2,1
-2019-09,Nova Scotia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,466.8,1
-2019-09,Nova Scotia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,381.7,1
-2019-09,Nova Scotia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,85.1,1
-2019-09,Nova Scotia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,36.4,1
-2019-09,Nova Scotia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.2,1
-2019-09,Nova Scotia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,62.1,1
-2019-09,Nova Scotia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,57.6,1
-2019-09,New Brunswick,Population,Both sexes,15 years and over,Persons,249,thousands,3,633.2,1
-2019-09,New Brunswick,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,387.1,1
-2019-09,New Brunswick,Employment,Both sexes,15 years and over,Persons,249,thousands,3,355.6,1
-2019-09,New Brunswick,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,300.8,1
-2019-09,New Brunswick,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,54.8,1
-2019-09,New Brunswick,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,31.5,1
-2019-09,New Brunswick,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,8.1,1
-2019-09,New Brunswick,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,61.1,1
-2019-09,New Brunswick,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,56.2,1
-2019-09,Quebec,Population,Both sexes,15 years and over,Persons,249,thousands,3,7066,1
-2019-09,Quebec,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,4600.2,1
-2019-09,Quebec,Employment,Both sexes,15 years and over,Persons,249,thousands,3,4375.6,1
-2019-09,Quebec,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3557.3,1
-2019-09,Quebec,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,818.3,1
-2019-09,Quebec,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,224.6,1
-2019-09,Quebec,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,4.9,1
-2019-09,Quebec,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.1,1
-2019-09,Quebec,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.9,1
-2019-09,Ontario,Population,Both sexes,15 years and over,Persons,249,thousands,3,12187.3,1
-2019-09,Ontario,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,7939.6,1
-2019-09,Ontario,Employment,Both sexes,15 years and over,Persons,249,thousands,3,7519.3,1
-2019-09,Ontario,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,6113.2,1
-2019-09,Ontario,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1406.1,1
-2019-09,Ontario,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,420.3,1
-2019-09,Ontario,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.3,1
-2019-09,Ontario,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.1,1
-2019-09,Ontario,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.7,1
-2019-09,Manitoba,Population,Both sexes,15 years and over,Persons,249,thousands,3,1041,1
-2019-09,Manitoba,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,687,1
-2019-09,Manitoba,Employment,Both sexes,15 years and over,Persons,249,thousands,3,654.1,1
-2019-09,Manitoba,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,533.1,1
-2019-09,Manitoba,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,121,1
-2019-09,Manitoba,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,32.9,1
-2019-09,Manitoba,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,4.8,1
-2019-09,Manitoba,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66,1
-2019-09,Manitoba,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,62.8,1
-2019-09,Saskatchewan,Population,Both sexes,15 years and over,Persons,249,thousands,3,891.2,1
-2019-09,Saskatchewan,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,615.3,1
-2019-09,Saskatchewan,Employment,Both sexes,15 years and over,Persons,249,thousands,3,582.6,1
-2019-09,Saskatchewan,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,473.3,1
-2019-09,Saskatchewan,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,109.3,1
-2019-09,Saskatchewan,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,32.7,1
-2019-09,Saskatchewan,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.3,1
-2019-09,Saskatchewan,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,69,1
-2019-09,Saskatchewan,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,65.4,1
-2019-09,Alberta,Population,Both sexes,15 years and over,Persons,249,thousands,3,3540.5,1
-2019-09,Alberta,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2511.6,1
-2019-09,Alberta,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2346.7,1
-2019-09,Alberta,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1918.6,1
-2019-09,Alberta,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,428.1,1
-2019-09,Alberta,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,165,1
-2019-09,Alberta,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,6.6,1
-2019-09,Alberta,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,70.9,1
-2019-09,Alberta,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,66.3,1
-2019-09,British Columbia,Population,Both sexes,15 years and over,Persons,249,thousands,3,4116.3,1
-2019-09,British Columbia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2679.4,1
-2019-09,British Columbia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2550.6,1
-2019-09,British Columbia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,2005.1,1
-2019-09,British Columbia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,545.5,1
-2019-09,British Columbia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,128.8,1
-2019-09,British Columbia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,4.8,1
-2019-09,British Columbia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.1,1
-2019-09,British Columbia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,62,1
-2020-01,Canada,Population,Both sexes,15 years and over,Persons,249,thousands,3,30995.4,1
-2020-01,Canada,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,20283.5,1
-2020-01,Canada,Employment,Both sexes,15 years and over,Persons,249,thousands,3,19159.1,1
-2020-01,Canada,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,15571.2,1
-2020-01,Canada,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3587.9,1
-2020-01,Canada,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,1124.4,1
-2020-01,Canada,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.5,1
-2020-01,Canada,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.4,1
-2020-01,Canada,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.8,1
-2020-01,Newfoundland and Labrador,Population,Both sexes,15 years and over,Persons,249,thousands,3,439.8,1
-2020-01,Newfoundland and Labrador,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,252.5,1
-2020-01,Newfoundland and Labrador,Employment,Both sexes,15 years and over,Persons,249,thousands,3,222.5,1
-2020-01,Newfoundland and Labrador,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,187.7,1
-2020-01,Newfoundland and Labrador,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,34.8,1
-2020-01,Newfoundland and Labrador,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,30,1
-2020-01,Newfoundland and Labrador,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,11.9,1
-2020-01,Newfoundland and Labrador,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,57.4,1
-2020-01,Newfoundland and Labrador,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,50.6,1
-2020-01,Prince Edward Island,Population,Both sexes,15 years and over,Persons,249,thousands,3,130.2,1
-2020-01,Prince Edward Island,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,86.8,1
-2020-01,Prince Edward Island,Employment,Both sexes,15 years and over,Persons,249,thousands,3,80.3,1
-2020-01,Prince Edward Island,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,68.4,1
-2020-01,Prince Edward Island,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,11.9,1
-2020-01,Prince Edward Island,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,6.5,1
-2020-01,Prince Edward Island,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.5,1
-2020-01,Prince Edward Island,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66.7,1
-2020-01,Prince Edward Island,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.7,1
-2020-01,Nova Scotia,Population,Both sexes,15 years and over,Persons,249,thousands,3,813,1
-2020-01,Nova Scotia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,504.5,1
-2020-01,Nova Scotia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,467.3,1
-2020-01,Nova Scotia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,382.3,1
-2020-01,Nova Scotia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,85,1
-2020-01,Nova Scotia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,37.2,1
-2020-01,Nova Scotia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.4,1
-2020-01,Nova Scotia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,62.1,1
-2020-01,Nova Scotia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,57.5,1
-2020-01,New Brunswick,Population,Both sexes,15 years and over,Persons,249,thousands,3,634.6,1
-2020-01,New Brunswick,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,390.1,1
-2020-01,New Brunswick,Employment,Both sexes,15 years and over,Persons,249,thousands,3,360.9,1
-2020-01,New Brunswick,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,308.6,1
-2020-01,New Brunswick,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,52.3,1
-2020-01,New Brunswick,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,29.2,1
-2020-01,New Brunswick,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.5,1
-2020-01,New Brunswick,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,61.5,1
-2020-01,New Brunswick,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,56.9,1
-2020-01,Quebec,Population,Both sexes,15 years and over,Persons,249,thousands,3,7089.1,1
-2020-01,Quebec,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,4597.2,1
-2020-01,Quebec,Employment,Both sexes,15 years and over,Persons,249,thousands,3,4364.5,1
-2020-01,Quebec,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3563.1,1
-2020-01,Quebec,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,801.4,1
-2020-01,Quebec,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,232.7,1
-2020-01,Quebec,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.1,1
-2020-01,Quebec,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.8,1
-2020-01,Quebec,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.6,1
-2020-01,Ontario,Population,Both sexes,15 years and over,Persons,249,thousands,3,12253.3,1
-2020-01,Ontario,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,7973.6,1
-2020-01,Ontario,Employment,Both sexes,15 years and over,Persons,249,thousands,3,7558.3,1
-2020-01,Ontario,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,6173.7,1
-2020-01,Ontario,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1384.6,1
-2020-01,Ontario,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,415.3,1
-2020-01,Ontario,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.2,1
-2020-01,Ontario,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65.1,1
-2020-01,Ontario,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.7,1
-2020-01,Manitoba,Population,Both sexes,15 years and over,Persons,249,thousands,3,1044.2,1
-2020-01,Manitoba,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,696.7,1
-2020-01,Manitoba,Employment,Both sexes,15 years and over,Persons,249,thousands,3,661,1
-2020-01,Manitoba,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,524.3,1
-2020-01,Manitoba,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,136.6,1
-2020-01,Manitoba,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,35.7,1
-2020-01,Manitoba,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,5.1,1
-2020-01,Manitoba,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66.7,1
-2020-01,Manitoba,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,63.3,1
-2020-01,Saskatchewan,Population,Both sexes,15 years and over,Persons,249,thousands,3,893.1,1
-2020-01,Saskatchewan,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,617.5,1
-2020-01,Saskatchewan,Employment,Both sexes,15 years and over,Persons,249,thousands,3,580.2,1
-2020-01,Saskatchewan,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,477,1
-2020-01,Saskatchewan,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,103.2,1
-2020-01,Saskatchewan,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,37.3,1
-2020-01,Saskatchewan,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,6,1
-2020-01,Saskatchewan,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,69.1,1
-2020-01,Saskatchewan,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,65,1
-2020-01,Alberta,Population,Both sexes,15 years and over,Persons,249,thousands,3,3557.7,1
-2020-01,Alberta,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2500.1,1
-2020-01,Alberta,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2318.5,1
-2020-01,Alberta,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1895,1
-2020-01,Alberta,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,423.5,1
-2020-01,Alberta,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,181.7,1
-2020-01,Alberta,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.3,1
-2020-01,Alberta,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,70.3,1
-2020-01,Alberta,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,65.2,1
-2020-01,British Columbia,Population,Both sexes,15 years and over,Persons,249,thousands,3,4140.3,1
-2020-01,British Columbia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2664.5,1
-2020-01,British Columbia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2545.6,1
-2020-01,British Columbia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1991.1,1
-2020-01,British Columbia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,554.5,1
-2020-01,British Columbia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,118.8,1
-2020-01,British Columbia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,4.5,1
-2020-01,British Columbia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.4,1
-2020-01,British Columbia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.5,1
-2020-05,Canada,Population,Both sexes,15 years and over,Persons,249,thousands,3,31114.3,1
-2020-05,Canada,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,19093.7,1
-2020-05,Canada,Employment,Both sexes,15 years and over,Persons,249,thousands,3,16474.5,1
-2020-05,Canada,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,13882.2,1
-2020-05,Canada,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,2592.3,1
-2020-05,Canada,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,2619.2,1
-2020-05,Canada,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,13.7,1
-2020-05,Canada,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,61.4,1
-2020-05,Canada,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,52.9,1
-2020-05,Newfoundland and Labrador,Population,Both sexes,15 years and over,Persons,249,thousands,3,439.4,1
-2020-05,Newfoundland and Labrador,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,236.9,1
-2020-05,Newfoundland and Labrador,Employment,Both sexes,15 years and over,Persons,249,thousands,3,198.2,1
-2020-05,Newfoundland and Labrador,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,168.7,1
-2020-05,Newfoundland and Labrador,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,29.5,1
-2020-05,Newfoundland and Labrador,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,38.7,1
-2020-05,Newfoundland and Labrador,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,16.3,1
-2020-05,Newfoundland and Labrador,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,53.9,1
-2020-05,Newfoundland and Labrador,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,45.1,1
-2020-05,Prince Edward Island,Population,Both sexes,15 years and over,Persons,249,thousands,3,131.1,1
-2020-05,Prince Edward Island,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,83.5,1
-2020-05,Prince Edward Island,Employment,Both sexes,15 years and over,Persons,249,thousands,3,71.9,1
-2020-05,Prince Edward Island,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,62.1,1
-2020-05,Prince Edward Island,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,9.8,1
-2020-05,Prince Edward Island,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,11.6,1
-2020-05,Prince Edward Island,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,13.9,1
-2020-05,Prince Edward Island,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,63.7,1
-2020-05,Prince Edward Island,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,54.8,1
-2020-05,Nova Scotia,Population,Both sexes,15 years and over,Persons,249,thousands,3,815.2,1
-2020-05,Nova Scotia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,467.5,1
-2020-05,Nova Scotia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,404.2,1
-2020-05,Nova Scotia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,334.2,1
-2020-05,Nova Scotia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,69.9,1
-2020-05,Nova Scotia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,63.4,1
-2020-05,Nova Scotia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,13.6,1
-2020-05,Nova Scotia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,57.3,1
-2020-05,Nova Scotia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,49.6,1
-2020-05,New Brunswick,Population,Both sexes,15 years and over,Persons,249,thousands,3,636,1
-2020-05,New Brunswick,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,376.3,1
-2020-05,New Brunswick,Employment,Both sexes,15 years and over,Persons,249,thousands,3,328.2,1
-2020-05,New Brunswick,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,282.9,1
-2020-05,New Brunswick,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,45.3,1
-2020-05,New Brunswick,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,48.2,1
-2020-05,New Brunswick,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,12.8,1
-2020-05,New Brunswick,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,59.2,1
-2020-05,New Brunswick,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,51.6,1
-2020-05,Quebec,Population,Both sexes,15 years and over,Persons,249,thousands,3,7111,1
-2020-05,Quebec,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,4398.9,1
-2020-05,Quebec,Employment,Both sexes,15 years and over,Persons,249,thousands,3,3794.9,1
-2020-05,Quebec,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3263.5,1
-2020-05,Quebec,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,531.4,1
-2020-05,Quebec,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,603.9,1
-2020-05,Quebec,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,13.7,1
-2020-05,Quebec,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,61.9,1
-2020-05,Quebec,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,53.4,1
-2020-05,Ontario,Population,Both sexes,15 years and over,Persons,249,thousands,3,12307.2,1
-2020-05,Ontario,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,7402.1,1
-2020-05,Ontario,Employment,Both sexes,15 years and over,Persons,249,thousands,3,6398.6,1
-2020-05,Ontario,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,5421.9,1
-2020-05,Ontario,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,976.8,1
-2020-05,Ontario,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,1003.4,1
-2020-05,Ontario,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,13.6,1
-2020-05,Ontario,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,60.1,1
-2020-05,Ontario,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,52,1
-2020-05,Manitoba,Population,Both sexes,15 years and over,Persons,249,thousands,3,1046.2,1
-2020-05,Manitoba,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,662.2,1
-2020-05,Manitoba,Employment,Both sexes,15 years and over,Persons,249,thousands,3,587.8,1
-2020-05,Manitoba,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,480.8,1
-2020-05,Manitoba,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,107,1
-2020-05,Manitoba,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,74.4,1
-2020-05,Manitoba,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,11.2,1
-2020-05,Manitoba,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,63.3,1
-2020-05,Manitoba,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,56.2,1
-2020-05,Saskatchewan,Population,Both sexes,15 years and over,Persons,249,thousands,3,893.9,1
-2020-05,Saskatchewan,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,579.9,1
-2020-05,Saskatchewan,Employment,Both sexes,15 years and over,Persons,249,thousands,3,507.5,1
-2020-05,Saskatchewan,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,424.8,1
-2020-05,Saskatchewan,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,82.7,1
-2020-05,Saskatchewan,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,72.4,1
-2020-05,Saskatchewan,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,12.5,1
-2020-05,Saskatchewan,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.9,1
-2020-05,Saskatchewan,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,56.8,1
-2020-05,Alberta,Population,Both sexes,15 years and over,Persons,249,thousands,3,3571.9,1
-2020-05,Alberta,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2362.3,1
-2020-05,Alberta,Employment,Both sexes,15 years and over,Persons,249,thousands,3,1997.2,1
-2020-05,Alberta,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1645.5,1
-2020-05,Alberta,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,351.7,1
-2020-05,Alberta,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,365.1,1
-2020-05,Alberta,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,15.5,1
-2020-05,Alberta,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,66.1,1
-2020-05,Alberta,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,55.9,1
-2020-05,British Columbia,Population,Both sexes,15 years and over,Persons,249,thousands,3,4162.3,1
-2020-05,British Columbia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2524,1
-2020-05,British Columbia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2185.9,1
-2020-05,British Columbia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1797.8,1
-2020-05,British Columbia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,388.1,1
-2020-05,British Columbia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,338.1,1
-2020-05,British Columbia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,13.4,1
-2020-05,British Columbia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,60.6,1
-2020-05,British Columbia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,52.5,1
-2020-09,Canada,Population,Both sexes,15 years and over,Persons,249,thousands,3,31225.9,1
-2020-09,Canada,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,20302.5,1
-2020-09,Canada,Employment,Both sexes,15 years and over,Persons,249,thousands,3,18469.9,1
-2020-09,Canada,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,14983.3,1
-2020-09,Canada,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3486.6,1
-2020-09,Canada,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,1832.6,1
-2020-09,Canada,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,9,1
-2020-09,Canada,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,65,1
-2020-09,Canada,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,59.1,1
-2020-09,Newfoundland and Labrador,Population,Both sexes,15 years and over,Persons,249,thousands,3,439.3,1
-2020-09,Newfoundland and Labrador,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,253.9,1
-2020-09,Newfoundland and Labrador,Employment,Both sexes,15 years and over,Persons,249,thousands,3,216.2,1
-2020-09,Newfoundland and Labrador,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,181.8,1
-2020-09,Newfoundland and Labrador,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,34.3,1
-2020-09,Newfoundland and Labrador,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,37.7,1
-2020-09,Newfoundland and Labrador,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,14.8,1
-2020-09,Newfoundland and Labrador,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,57.8,1
-2020-09,Newfoundland and Labrador,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,49.2,1
-2020-09,Prince Edward Island,Population,Both sexes,15 years and over,Persons,249,thousands,3,131.9,1
-2020-09,Prince Edward Island,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,84,1
-2020-09,Prince Edward Island,Employment,Both sexes,15 years and over,Persons,249,thousands,3,75.5,1
-2020-09,Prince Edward Island,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,62.9,1
-2020-09,Prince Edward Island,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,12.6,1
-2020-09,Prince Edward Island,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,8.5,1
-2020-09,Prince Edward Island,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,10.1,1
-2020-09,Prince Edward Island,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,63.7,1
-2020-09,Prince Edward Island,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,57.2,1
-2020-09,Nova Scotia,Population,Both sexes,15 years and over,Persons,249,thousands,3,818.7,1
-2020-09,Nova Scotia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,494.5,1
-2020-09,Nova Scotia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,455.7,1
-2020-09,Nova Scotia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,363.8,1
-2020-09,Nova Scotia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,91.9,1
-2020-09,Nova Scotia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,38.9,1
-2020-09,Nova Scotia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.9,1
-2020-09,Nova Scotia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,60.4,1
-2020-09,Nova Scotia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,55.7,1
-2020-09,New Brunswick,Population,Both sexes,15 years and over,Persons,249,thousands,3,637.5,1
-2020-09,New Brunswick,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,390.7,1
-2020-09,New Brunswick,Employment,Both sexes,15 years and over,Persons,249,thousands,3,350.1,1
-2020-09,New Brunswick,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,297.2,1
-2020-09,New Brunswick,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,52.9,1
-2020-09,New Brunswick,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,40.6,1
-2020-09,New Brunswick,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,10.4,1
-2020-09,New Brunswick,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,61.3,1
-2020-09,New Brunswick,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,54.9,1
-2020-09,Quebec,Population,Both sexes,15 years and over,Persons,249,thousands,3,7132.4,1
-2020-09,Quebec,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,4612.8,1
-2020-09,Quebec,Employment,Both sexes,15 years and over,Persons,249,thousands,3,4270.9,1
-2020-09,Quebec,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,3476.2,1
-2020-09,Quebec,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,794.7,1
-2020-09,Quebec,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,341.9,1
-2020-09,Quebec,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7.4,1
-2020-09,Quebec,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.7,1
-2020-09,Quebec,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,59.9,1
-2020-09,Ontario,Population,Both sexes,15 years and over,Persons,249,thousands,3,12356.4,1
-2020-09,Ontario,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,7993.9,1
-2020-09,Ontario,Employment,Both sexes,15 years and over,Persons,249,thousands,3,7236.6,1
-2020-09,Ontario,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,5943,1
-2020-09,Ontario,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1293.6,1
-2020-09,Ontario,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,757.4,1
-2020-09,Ontario,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,9.5,1
-2020-09,Ontario,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,64.7,1
-2020-09,Ontario,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,58.6,1
-2020-09,Manitoba,Population,Both sexes,15 years and over,Persons,249,thousands,3,1047.5,1
-2020-09,Manitoba,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,701.6,1
-2020-09,Manitoba,Employment,Both sexes,15 years and over,Persons,249,thousands,3,652.3,1
-2020-09,Manitoba,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,518.3,1
-2020-09,Manitoba,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,134,1
-2020-09,Manitoba,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,49.3,1
-2020-09,Manitoba,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,7,1
-2020-09,Manitoba,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,67,1
-2020-09,Manitoba,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,62.3,1
-2020-09,Saskatchewan,Population,Both sexes,15 years and over,Persons,249,thousands,3,893.9,1
-2020-09,Saskatchewan,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,605.8,1
-2020-09,Saskatchewan,Employment,Both sexes,15 years and over,Persons,249,thousands,3,564.5,1
-2020-09,Saskatchewan,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,461.8,1
-2020-09,Saskatchewan,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,102.7,1
-2020-09,Saskatchewan,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,41.4,1
-2020-09,Saskatchewan,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,6.8,1
-2020-09,Saskatchewan,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,67.8,1
-2020-09,Saskatchewan,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,63.2,1
-2020-09,Alberta,Population,Both sexes,15 years and over,Persons,249,thousands,3,3583,1
-2020-09,Alberta,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2497.3,1
-2020-09,Alberta,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2204,1
-2020-09,Alberta,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1790.6,1
-2020-09,Alberta,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,413.4,1
-2020-09,Alberta,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,293.2,1
-2020-09,Alberta,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,11.7,1
-2020-09,Alberta,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,69.7,1
-2020-09,Alberta,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,61.5,1
-2020-09,British Columbia,Population,Both sexes,15 years and over,Persons,249,thousands,3,4185.4,1
-2020-09,British Columbia,Labour force,Both sexes,15 years and over,Persons,249,thousands,3,2668,1
-2020-09,British Columbia,Employment,Both sexes,15 years and over,Persons,249,thousands,3,2444.3,1
-2020-09,British Columbia,Full-time employment,Both sexes,15 years and over,Persons,249,thousands,3,1887.7,1
-2020-09,British Columbia,Part-time employment,Both sexes,15 years and over,Persons,249,thousands,3,556.6,1
-2020-09,British Columbia,Unemployment,Both sexes,15 years and over,Persons,249,thousands,3,223.7,1
-2020-09,British Columbia,Unemployment rate,Both sexes,15 years and over,Percentage,242,units,0,8.4,1
-2020-09,British Columbia,Participation rate,Both sexes,15 years and over,Percentage,242,units,0,63.7,1
-2020-09,British Columbia,Employment rate,Both sexes,15 years and over,Percentage,242,units,0,58.4,1
+REF_DATE,GEO,Labour force characteristics,Sex,VALUE
+2019-01,Canada,Population,Both sexes,30526.6
+2019-01,Canada,Labour force,Both sexes,20053.8
+2019-01,Canada,Employment,Both sexes,18891.4
+2019-01,Canada,Full-time employment,Both sexes,15295.5
+2019-01,Canada,Part-time employment,Both sexes,3595.9
+2019-01,Canada,Unemployment,Both sexes,1162.4
+2019-01,Newfoundland and Labrador,Population,Both sexes,441.9
+2019-01,Newfoundland and Labrador,Labour force,Both sexes,262.2
+2019-01,Newfoundland and Labrador,Employment,Both sexes,232.3
+2019-01,Newfoundland and Labrador,Full-time employment,Both sexes,196.7
+2019-01,Newfoundland and Labrador,Part-time employment,Both sexes,35.5
+2019-01,Newfoundland and Labrador,Unemployment,Both sexes,29.9
+2019-01,Prince Edward Island,Population,Both sexes,126.9
+2019-01,Prince Edward Island,Labour force,Both sexes,83.6
+2019-01,Prince Edward Island,Employment,Both sexes,75.5
+2019-01,Prince Edward Island,Full-time employment,Both sexes,64.3
+2019-01,Prince Edward Island,Part-time employment,Both sexes,11.2
+2019-01,Prince Edward Island,Unemployment,Both sexes,8
+2019-01,Nova Scotia,Population,Both sexes,803
+2019-01,Nova Scotia,Labour force,Both sexes,499.2
+2019-01,Nova Scotia,Employment,Both sexes,465.6
+2019-01,Nova Scotia,Full-time employment,Both sexes,381.1
+2019-01,Nova Scotia,Part-time employment,Both sexes,84.6
+2019-01,Nova Scotia,Unemployment,Both sexes,33.6
+2019-01,New Brunswick,Population,Both sexes,628.9
+2019-01,New Brunswick,Labour force,Both sexes,387
+2019-01,New Brunswick,Employment,Both sexes,355.6
+2019-01,New Brunswick,Full-time employment,Both sexes,303.8
+2019-01,New Brunswick,Part-time employment,Both sexes,51.8
+2019-01,New Brunswick,Unemployment,Both sexes,31.4
+2019-01,Quebec,Population,Both sexes,7023.3
+2019-01,Quebec,Labour force,Both sexes,4547.1
+2019-01,Quebec,Employment,Both sexes,4304.2
+2019-01,Quebec,Full-time employment,Both sexes,3494.5
+2019-01,Quebec,Part-time employment,Both sexes,809.7
+2019-01,Quebec,Unemployment,Both sexes,242.9
+2019-01,Ontario,Population,Both sexes,12021.3
+2019-01,Ontario,Labour force,Both sexes,7797.7
+2019-01,Ontario,Employment,Both sexes,7349.1
+2019-01,Ontario,Full-time employment,Both sexes,5976.7
+2019-01,Ontario,Part-time employment,Both sexes,1372.4
+2019-01,Ontario,Unemployment,Both sexes,448.6
+2019-01,Manitoba,Population,Both sexes,1031.2
+2019-01,Manitoba,Labour force,Both sexes,696.1
+2019-01,Manitoba,Employment,Both sexes,657.5
+2019-01,Manitoba,Full-time employment,Both sexes,526.9
+2019-01,Manitoba,Part-time employment,Both sexes,130.6
+2019-01,Manitoba,Unemployment,Both sexes,38.6
+2019-01,Saskatchewan,Population,Both sexes,887.5
+2019-01,Saskatchewan,Labour force,Both sexes,610.9
+2019-01,Saskatchewan,Employment,Both sexes,576.7
+2019-01,Saskatchewan,Full-time employment,Both sexes,472
+2019-01,Saskatchewan,Part-time employment,Both sexes,104.8
+2019-01,Saskatchewan,Unemployment,Both sexes,34.1
+2019-01,Alberta,Population,Both sexes,3498.9
+2019-01,Alberta,Labour force,Both sexes,2497.6
+2019-01,Alberta,Employment,Both sexes,2327.8
+2019-01,Alberta,Full-time employment,Both sexes,1907.2
+2019-01,Alberta,Part-time employment,Both sexes,420.6
+2019-01,Alberta,Unemployment,Both sexes,169.8
+2019-01,British Columbia,Population,Both sexes,4063.7
+2019-01,British Columbia,Labour force,Both sexes,2672.5
+2019-01,British Columbia,Employment,Both sexes,2547.1
+2019-01,British Columbia,Full-time employment,Both sexes,1972.3
+2019-01,British Columbia,Part-time employment,Both sexes,574.8
+2019-01,British Columbia,Unemployment,Both sexes,125.3
+2019-05,Canada,Population,Both sexes,30662.4
+2019-05,Canada,Labour force,Both sexes,20142.7
+2019-05,Canada,Employment,Both sexes,19050.4
+2019-05,Canada,Full-time employment,Both sexes,15439.5
+2019-05,Canada,Part-time employment,Both sexes,3610.9
+2019-05,Canada,Unemployment,Both sexes,1092.3
+2019-05,Newfoundland and Labrador,Population,Both sexes,440.9
+2019-05,Newfoundland and Labrador,Labour force,Both sexes,258.4
+2019-05,Newfoundland and Labrador,Employment,Both sexes,226.2
+2019-05,Newfoundland and Labrador,Full-time employment,Both sexes,194.5
+2019-05,Newfoundland and Labrador,Part-time employment,Both sexes,31.8
+2019-05,Newfoundland and Labrador,Unemployment,Both sexes,32.2
+2019-05,Prince Edward Island,Population,Both sexes,128.1
+2019-05,Prince Edward Island,Labour force,Both sexes,84.9
+2019-05,Prince Edward Island,Employment,Both sexes,77.3
+2019-05,Prince Edward Island,Full-time employment,Both sexes,65.5
+2019-05,Prince Edward Island,Part-time employment,Both sexes,11.7
+2019-05,Prince Edward Island,Unemployment,Both sexes,7.6
+2019-05,Nova Scotia,Population,Both sexes,805.1
+2019-05,Nova Scotia,Labour force,Both sexes,502.3
+2019-05,Nova Scotia,Employment,Both sexes,468.8
+2019-05,Nova Scotia,Full-time employment,Both sexes,381.1
+2019-05,Nova Scotia,Part-time employment,Both sexes,87.7
+2019-05,Nova Scotia,Unemployment,Both sexes,33.5
+2019-05,New Brunswick,Population,Both sexes,630.3
+2019-05,New Brunswick,Labour force,Both sexes,386.9
+2019-05,New Brunswick,Employment,Both sexes,358.4
+2019-05,New Brunswick,Full-time employment,Both sexes,303.8
+2019-05,New Brunswick,Part-time employment,Both sexes,54.5
+2019-05,New Brunswick,Unemployment,Both sexes,28.6
+2019-05,Quebec,Population,Both sexes,7040.7
+2019-05,Quebec,Labour force,Both sexes,4554.4
+2019-05,Quebec,Employment,Both sexes,4327.9
+2019-05,Quebec,Full-time employment,Both sexes,3514.3
+2019-05,Quebec,Part-time employment,Both sexes,813.5
+2019-05,Quebec,Unemployment,Both sexes,226.6
+2019-05,Ontario,Population,Both sexes,12093.3
+2019-05,Ontario,Labour force,Both sexes,7844.6
+2019-05,Ontario,Employment,Both sexes,7435.4
+2019-05,Ontario,Full-time employment,Both sexes,6051.5
+2019-05,Ontario,Part-time employment,Both sexes,1383.9
+2019-05,Ontario,Unemployment,Both sexes,409.2
+2019-05,Manitoba,Population,Both sexes,1035.2
+2019-05,Manitoba,Labour force,Both sexes,689.3
+2019-05,Manitoba,Employment,Both sexes,654.2
+2019-05,Manitoba,Full-time employment,Both sexes,522.5
+2019-05,Manitoba,Part-time employment,Both sexes,131.7
+2019-05,Manitoba,Unemployment,Both sexes,35.1
+2019-05,Saskatchewan,Population,Both sexes,888.6
+2019-05,Saskatchewan,Labour force,Both sexes,611.6
+2019-05,Saskatchewan,Employment,Both sexes,579.5
+2019-05,Saskatchewan,Full-time employment,Both sexes,476.4
+2019-05,Saskatchewan,Part-time employment,Both sexes,103
+2019-05,Saskatchewan,Unemployment,Both sexes,32.1
+2019-05,Alberta,Population,Both sexes,3516.2
+2019-05,Alberta,Labour force,Both sexes,2516
+2019-05,Alberta,Employment,Both sexes,2346.9
+2019-05,Alberta,Full-time employment,Both sexes,1912.9
+2019-05,Alberta,Part-time employment,Both sexes,434
+2019-05,Alberta,Unemployment,Both sexes,169
+2019-05,British Columbia,Population,Both sexes,4084
+2019-05,British Columbia,Labour force,Both sexes,2694.3
+2019-05,British Columbia,Employment,Both sexes,2575.8
+2019-05,British Columbia,Full-time employment,Both sexes,2017
+2019-05,British Columbia,Part-time employment,Both sexes,558.9
+2019-05,British Columbia,Unemployment,Both sexes,118.5
+2019-09,Canada,Population,Both sexes,30854.9
+2019-09,Canada,Labour force,Both sexes,20263.2
+2019-09,Canada,Employment,Both sexes,19154.9
+2019-09,Canada,Full-time employment,Both sexes,15541.9
+2019-09,Canada,Part-time employment,Both sexes,3613
+2019-09,Canada,Unemployment,Both sexes,1108.4
+2019-09,Newfoundland and Labrador,Population,Both sexes,439.9
+2019-09,Newfoundland and Labrador,Labour force,Both sexes,253.5
+2019-09,Newfoundland and Labrador,Employment,Both sexes,224.7
+2019-09,Newfoundland and Labrador,Full-time employment,Both sexes,191.5
+2019-09,Newfoundland and Labrador,Part-time employment,Both sexes,33.2
+2019-09,Newfoundland and Labrador,Unemployment,Both sexes,28.8
+2019-09,Prince Edward Island,Population,Both sexes,129.7
+2019-09,Prince Edward Island,Labour force,Both sexes,86.4
+2019-09,Prince Edward Island,Employment,Both sexes,79
+2019-09,Prince Edward Island,Full-time employment,Both sexes,67.3
+2019-09,Prince Edward Island,Part-time employment,Both sexes,11.8
+2019-09,Prince Edward Island,Unemployment,Both sexes,7.4
+2019-09,Nova Scotia,Population,Both sexes,809.8
+2019-09,Nova Scotia,Labour force,Both sexes,503.2
+2019-09,Nova Scotia,Employment,Both sexes,466.8
+2019-09,Nova Scotia,Full-time employment,Both sexes,381.7
+2019-09,Nova Scotia,Part-time employment,Both sexes,85.1
+2019-09,Nova Scotia,Unemployment,Both sexes,36.4
+2019-09,New Brunswick,Population,Both sexes,633.2
+2019-09,New Brunswick,Labour force,Both sexes,387.1
+2019-09,New Brunswick,Employment,Both sexes,355.6
+2019-09,New Brunswick,Full-time employment,Both sexes,300.8
+2019-09,New Brunswick,Part-time employment,Both sexes,54.8
+2019-09,New Brunswick,Unemployment,Both sexes,31.5
+2019-09,Quebec,Population,Both sexes,7066
+2019-09,Quebec,Labour force,Both sexes,4600.2
+2019-09,Quebec,Employment,Both sexes,4375.6
+2019-09,Quebec,Full-time employment,Both sexes,3557.3
+2019-09,Quebec,Part-time employment,Both sexes,818.3
+2019-09,Quebec,Unemployment,Both sexes,224.6
+2019-09,Ontario,Population,Both sexes,12187.3
+2019-09,Ontario,Labour force,Both sexes,7939.6
+2019-09,Ontario,Employment,Both sexes,7519.3
+2019-09,Ontario,Full-time employment,Both sexes,6113.2
+2019-09,Ontario,Part-time employment,Both sexes,1406.1
+2019-09,Ontario,Unemployment,Both sexes,420.3
+2019-09,Manitoba,Population,Both sexes,1041
+2019-09,Manitoba,Labour force,Both sexes,687
+2019-09,Manitoba,Employment,Both sexes,654.1
+2019-09,Manitoba,Full-time employment,Both sexes,533.1
+2019-09,Manitoba,Part-time employment,Both sexes,121
+2019-09,Manitoba,Unemployment,Both sexes,32.9
+2019-09,Saskatchewan,Population,Both sexes,891.2
+2019-09,Saskatchewan,Labour force,Both sexes,615.3
+2019-09,Saskatchewan,Employment,Both sexes,582.6
+2019-09,Saskatchewan,Full-time employment,Both sexes,473.3
+2019-09,Saskatchewan,Part-time employment,Both sexes,109.3
+2019-09,Saskatchewan,Unemployment,Both sexes,32.7
+2019-09,Alberta,Population,Both sexes,3540.5
+2019-09,Alberta,Labour force,Both sexes,2511.6
+2019-09,Alberta,Employment,Both sexes,2346.7
+2019-09,Alberta,Full-time employment,Both sexes,1918.6
+2019-09,Alberta,Part-time employment,Both sexes,428.1
+2019-09,Alberta,Unemployment,Both sexes,165
+2019-09,British Columbia,Population,Both sexes,4116.3
+2019-09,British Columbia,Labour force,Both sexes,2679.4
+2019-09,British Columbia,Employment,Both sexes,2550.6
+2019-09,British Columbia,Full-time employment,Both sexes,2005.1
+2019-09,British Columbia,Part-time employment,Both sexes,545.5
+2019-09,British Columbia,Unemployment,Both sexes,128.8
+2020-01,Canada,Population,Both sexes,30995.4
+2020-01,Canada,Labour force,Both sexes,20283.5
+2020-01,Canada,Employment,Both sexes,19159.1
+2020-01,Canada,Full-time employment,Both sexes,15571.2
+2020-01,Canada,Part-time employment,Both sexes,3587.9
+2020-01,Canada,Unemployment,Both sexes,1124.4
+2020-01,Newfoundland and Labrador,Population,Both sexes,439.8
+2020-01,Newfoundland and Labrador,Labour force,Both sexes,252.5
+2020-01,Newfoundland and Labrador,Employment,Both sexes,222.5
+2020-01,Newfoundland and Labrador,Full-time employment,Both sexes,187.7
+2020-01,Newfoundland and Labrador,Part-time employment,Both sexes,34.8
+2020-01,Newfoundland and Labrador,Unemployment,Both sexes,30
+2020-01,Prince Edward Island,Population,Both sexes,130.2
+2020-01,Prince Edward Island,Labour force,Both sexes,86.8
+2020-01,Prince Edward Island,Employment,Both sexes,80.3
+2020-01,Prince Edward Island,Full-time employment,Both sexes,68.4
+2020-01,Prince Edward Island,Part-time employment,Both sexes,11.9
+2020-01,Prince Edward Island,Unemployment,Both sexes,6.5
+2020-01,Nova Scotia,Population,Both sexes,813
+2020-01,Nova Scotia,Labour force,Both sexes,504.5
+2020-01,Nova Scotia,Employment,Both sexes,467.3
+2020-01,Nova Scotia,Full-time employment,Both sexes,382.3
+2020-01,Nova Scotia,Part-time employment,Both sexes,85
+2020-01,Nova Scotia,Unemployment,Both sexes,37.2
+2020-01,New Brunswick,Population,Both sexes,634.6
+2020-01,New Brunswick,Labour force,Both sexes,390.1
+2020-01,New Brunswick,Employment,Both sexes,360.9
+2020-01,New Brunswick,Full-time employment,Both sexes,308.6
+2020-01,New Brunswick,Part-time employment,Both sexes,52.3
+2020-01,New Brunswick,Unemployment,Both sexes,29.2
+2020-01,Quebec,Population,Both sexes,7089.1
+2020-01,Quebec,Labour force,Both sexes,4597.2
+2020-01,Quebec,Employment,Both sexes,4364.5
+2020-01,Quebec,Full-time employment,Both sexes,3563.1
+2020-01,Quebec,Part-time employment,Both sexes,801.4
+2020-01,Quebec,Unemployment,Both sexes,232.7
+2020-01,Ontario,Population,Both sexes,12253.3
+2020-01,Ontario,Labour force,Both sexes,7973.6
+2020-01,Ontario,Employment,Both sexes,7558.3
+2020-01,Ontario,Full-time employment,Both sexes,6173.7
+2020-01,Ontario,Part-time employment,Both sexes,1384.6
+2020-01,Ontario,Unemployment,Both sexes,415.3
+2020-01,Manitoba,Population,Both sexes,1044.2
+2020-01,Manitoba,Labour force,Both sexes,696.7
+2020-01,Manitoba,Employment,Both sexes,661
+2020-01,Manitoba,Full-time employment,Both sexes,524.3
+2020-01,Manitoba,Part-time employment,Both sexes,136.6
+2020-01,Manitoba,Unemployment,Both sexes,35.7
+2020-01,Saskatchewan,Population,Both sexes,893.1
+2020-01,Saskatchewan,Labour force,Both sexes,617.5
+2020-01,Saskatchewan,Employment,Both sexes,580.2
+2020-01,Saskatchewan,Full-time employment,Both sexes,477
+2020-01,Saskatchewan,Part-time employment,Both sexes,103.2
+2020-01,Saskatchewan,Unemployment,Both sexes,37.3
+2020-01,Alberta,Population,Both sexes,3557.7
+2020-01,Alberta,Labour force,Both sexes,2500.1
+2020-01,Alberta,Employment,Both sexes,2318.5
+2020-01,Alberta,Full-time employment,Both sexes,1895
+2020-01,Alberta,Part-time employment,Both sexes,423.5
+2020-01,Alberta,Unemployment,Both sexes,181.7
+2020-01,British Columbia,Population,Both sexes,4140.3
+2020-01,British Columbia,Labour force,Both sexes,2664.5
+2020-01,British Columbia,Employment,Both sexes,2545.6
+2020-01,British Columbia,Full-time employment,Both sexes,1991.1
+2020-01,British Columbia,Part-time employment,Both sexes,554.5
+2020-01,British Columbia,Unemployment,Both sexes,118.8
+2020-05,Canada,Population,Both sexes,31114.3
+2020-05,Canada,Labour force,Both sexes,19093.7
+2020-05,Canada,Employment,Both sexes,16474.5
+2020-05,Canada,Full-time employment,Both sexes,13882.2
+2020-05,Canada,Part-time employment,Both sexes,2592.3
+2020-05,Canada,Unemployment,Both sexes,2619.2
+2020-05,Newfoundland and Labrador,Population,Both sexes,439.4
+2020-05,Newfoundland and Labrador,Labour force,Both sexes,236.9
+2020-05,Newfoundland and Labrador,Employment,Both sexes,198.2
+2020-05,Newfoundland and Labrador,Full-time employment,Both sexes,168.7
+2020-05,Newfoundland and Labrador,Part-time employment,Both sexes,29.5
+2020-05,Newfoundland and Labrador,Unemployment,Both sexes,38.7
+2020-05,Prince Edward Island,Population,Both sexes,131.1
+2020-05,Prince Edward Island,Labour force,Both sexes,83.5
+2020-05,Prince Edward Island,Employment,Both sexes,71.9
+2020-05,Prince Edward Island,Full-time employment,Both sexes,62.1
+2020-05,Prince Edward Island,Part-time employment,Both sexes,9.8
+2020-05,Prince Edward Island,Unemployment,Both sexes,11.6
+2020-05,Nova Scotia,Population,Both sexes,815.2
+2020-05,Nova Scotia,Labour force,Both sexes,467.5
+2020-05,Nova Scotia,Employment,Both sexes,404.2
+2020-05,Nova Scotia,Full-time employment,Both sexes,334.2
+2020-05,Nova Scotia,Part-time employment,Both sexes,69.9
+2020-05,Nova Scotia,Unemployment,Both sexes,63.4
+2020-05,New Brunswick,Population,Both sexes,636
+2020-05,New Brunswick,Labour force,Both sexes,376.3
+2020-05,New Brunswick,Employment,Both sexes,328.2
+2020-05,New Brunswick,Full-time employment,Both sexes,282.9
+2020-05,New Brunswick,Part-time employment,Both sexes,45.3
+2020-05,New Brunswick,Unemployment,Both sexes,48.2
+2020-05,Quebec,Population,Both sexes,7111
+2020-05,Quebec,Labour force,Both sexes,4398.9
+2020-05,Quebec,Employment,Both sexes,3794.9
+2020-05,Quebec,Full-time employment,Both sexes,3263.5
+2020-05,Quebec,Part-time employment,Both sexes,531.4
+2020-05,Quebec,Unemployment,Both sexes,603.9
+2020-05,Ontario,Population,Both sexes,12307.2
+2020-05,Ontario,Labour force,Both sexes,7402.1
+2020-05,Ontario,Employment,Both sexes,6398.6
+2020-05,Ontario,Full-time employment,Both sexes,5421.9
+2020-05,Ontario,Part-time employment,Both sexes,976.8
+2020-05,Ontario,Unemployment,Both sexes,1003.4
+2020-05,Manitoba,Population,Both sexes,1046.2
+2020-05,Manitoba,Labour force,Both sexes,662.2
+2020-05,Manitoba,Employment,Both sexes,587.8
+2020-05,Manitoba,Full-time employment,Both sexes,480.8
+2020-05,Manitoba,Part-time employment,Both sexes,107
+2020-05,Manitoba,Unemployment,Both sexes,74.4
+2020-05,Saskatchewan,Population,Both sexes,893.9
+2020-05,Saskatchewan,Labour force,Both sexes,579.9
+2020-05,Saskatchewan,Employment,Both sexes,507.5
+2020-05,Saskatchewan,Full-time employment,Both sexes,424.8
+2020-05,Saskatchewan,Part-time employment,Both sexes,82.7
+2020-05,Saskatchewan,Unemployment,Both sexes,72.4
+2020-05,Alberta,Population,Both sexes,3571.9
+2020-05,Alberta,Labour force,Both sexes,2362.3
+2020-05,Alberta,Employment,Both sexes,1997.2
+2020-05,Alberta,Full-time employment,Both sexes,1645.5
+2020-05,Alberta,Part-time employment,Both sexes,351.7
+2020-05,Alberta,Unemployment,Both sexes,365.1
+2020-05,British Columbia,Population,Both sexes,4162.3
+2020-05,British Columbia,Labour force,Both sexes,2524
+2020-05,British Columbia,Employment,Both sexes,2185.9
+2020-05,British Columbia,Full-time employment,Both sexes,1797.8
+2020-05,British Columbia,Part-time employment,Both sexes,388.1
+2020-05,British Columbia,Unemployment,Both sexes,338.1
+2020-09,Canada,Population,Both sexes,31225.9
+2020-09,Canada,Labour force,Both sexes,20302.5
+2020-09,Canada,Employment,Both sexes,18469.9
+2020-09,Canada,Full-time employment,Both sexes,14983.3
+2020-09,Canada,Part-time employment,Both sexes,3486.6
+2020-09,Canada,Unemployment,Both sexes,1832.6
+2020-09,Newfoundland and Labrador,Population,Both sexes,439.3
+2020-09,Newfoundland and Labrador,Labour force,Both sexes,253.9
+2020-09,Newfoundland and Labrador,Employment,Both sexes,216.2
+2020-09,Newfoundland and Labrador,Full-time employment,Both sexes,181.8
+2020-09,Newfoundland and Labrador,Part-time employment,Both sexes,34.3
+2020-09,Newfoundland and Labrador,Unemployment,Both sexes,37.7
+2020-09,Prince Edward Island,Population,Both sexes,131.9
+2020-09,Prince Edward Island,Labour force,Both sexes,84
+2020-09,Prince Edward Island,Employment,Both sexes,75.5
+2020-09,Prince Edward Island,Full-time employment,Both sexes,62.9
+2020-09,Prince Edward Island,Part-time employment,Both sexes,12.6
+2020-09,Prince Edward Island,Unemployment,Both sexes,8.5
+2020-09,Nova Scotia,Population,Both sexes,818.7
+2020-09,Nova Scotia,Labour force,Both sexes,494.5
+2020-09,Nova Scotia,Employment,Both sexes,455.7
+2020-09,Nova Scotia,Full-time employment,Both sexes,363.8
+2020-09,Nova Scotia,Part-time employment,Both sexes,91.9
+2020-09,Nova Scotia,Unemployment,Both sexes,38.9
+2020-09,New Brunswick,Population,Both sexes,637.5
+2020-09,New Brunswick,Labour force,Both sexes,390.7
+2020-09,New Brunswick,Employment,Both sexes,350.1
+2020-09,New Brunswick,Full-time employment,Both sexes,297.2
+2020-09,New Brunswick,Part-time employment,Both sexes,52.9
+2020-09,New Brunswick,Unemployment,Both sexes,40.6
+2020-09,Quebec,Population,Both sexes,7132.4
+2020-09,Quebec,Labour force,Both sexes,4612.8
+2020-09,Quebec,Employment,Both sexes,4270.9
+2020-09,Quebec,Full-time employment,Both sexes,3476.2
+2020-09,Quebec,Part-time employment,Both sexes,794.7
+2020-09,Quebec,Unemployment,Both sexes,341.9
+2020-09,Ontario,Population,Both sexes,12356.4
+2020-09,Ontario,Labour force,Both sexes,7993.9
+2020-09,Ontario,Employment,Both sexes,7236.6
+2020-09,Ontario,Full-time employment,Both sexes,5943
+2020-09,Ontario,Part-time employment,Both sexes,1293.6
+2020-09,Ontario,Unemployment,Both sexes,757.4
+2020-09,Manitoba,Population,Both sexes,1047.5
+2020-09,Manitoba,Labour force,Both sexes,701.6
+2020-09,Manitoba,Employment,Both sexes,652.3
+2020-09,Manitoba,Full-time employment,Both sexes,518.3
+2020-09,Manitoba,Part-time employment,Both sexes,134
+2020-09,Manitoba,Unemployment,Both sexes,49.3
+2020-09,Saskatchewan,Population,Both sexes,893.9
+2020-09,Saskatchewan,Labour force,Both sexes,605.8
+2020-09,Saskatchewan,Employment,Both sexes,564.5
+2020-09,Saskatchewan,Full-time employment,Both sexes,461.8
+2020-09,Saskatchewan,Part-time employment,Both sexes,102.7
+2020-09,Saskatchewan,Unemployment,Both sexes,41.4
+2020-09,Alberta,Population,Both sexes,3583
+2020-09,Alberta,Labour force,Both sexes,2497.3
+2020-09,Alberta,Employment,Both sexes,2204
+2020-09,Alberta,Full-time employment,Both sexes,1790.6
+2020-09,Alberta,Part-time employment,Both sexes,413.4
+2020-09,Alberta,Unemployment,Both sexes,293.2
+2020-09,British Columbia,Population,Both sexes,4185.4
+2020-09,British Columbia,Labour force,Both sexes,2668
+2020-09,British Columbia,Employment,Both sexes,2444.3
+2020-09,British Columbia,Full-time employment,Both sexes,1887.7
+2020-09,British Columbia,Part-time employment,Both sexes,556.6
+2020-09,British Columbia,Unemployment,Both sexes,223.7
