@@ -1,28 +1,29 @@
 package Database;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class Simulator {
-
     public static void main(String[] args) throws IOException{
-
-        //Get scanner instance
-        Scanner scanner = new Scanner(new File("src/Database/Male.csv"));
-        
-        //Set the delimiter used in file
-        scanner.useDelimiter(",");
-        
-        //Get all tokens and store them in some data structure
-        //I am just printing them
-        while (scanner.hasNext()) 
-        {
-            System.out.print(scanner.next() + "|");
-        }
-        
-        scanner.close();
-     } 
-          
     
+        BufferedReader file = new BufferedReader(new FileReader("src/Database/BothSexes.csv"));
+        String date;
+        String province;
+        String labour;
+        String sex;
+        String population; 
 
+
+        while(file.readLine() != null){
+            String data[] = file.readLine().split(",");
+            date = data[0];
+            province = data[1];
+            labour = data[2];
+            sex = data[3];
+            population = data[4];
+            System.out.println(date + "     " + province + "     " + labour + "     " + sex + "     " +population);
+        }
+        file.close();
+    }
 }
+
+
