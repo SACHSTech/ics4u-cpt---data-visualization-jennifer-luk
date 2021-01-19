@@ -3,6 +3,20 @@ package Database;
 import java.io.*;
 
 public class Simulator {
+
+    // method to pause console
+    private static void pause(int pauseLength) {
+        try {
+            Thread.sleep(pauseLength);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void clearScreen() {  
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();  
+    }  
     public static void main(String[] args) throws IOException{
         String date;
         String province;
@@ -10,12 +24,10 @@ public class Simulator {
         String sex;
         String population; 
         String line = "";
-        Province prov; 
-        Labour lab; 
+        DataReader data; 
         int count = 0; 
-        Province[] provinces = new Province[792];
-        Labour[] labourtype = new Labour[792];
-
+        DataReader[] datareader = new DataReader[792];
+ 
         BufferedReader file = new BufferedReader(new FileReader("src/Database/DataSet.csv"));
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));      
         
@@ -30,11 +42,9 @@ public class Simulator {
             sex = element[3];
             population = element[4];
             
-            prov = new Province(date, province, labour, sex, population);
-            lab = new Labour(date, province, labour, sex, population);
-           
-            provinces[count] = prov;
-            labourtype [count] = lab; 
+            data = new DataReader(date, province, labour, sex, population);
+            
+            datareader[count] = data;
 
             count++; 
         }
@@ -43,6 +53,7 @@ public class Simulator {
         System.out.println("\nWelcome to the Stats Canada Labour Force Characteristics System");
         boolean endmenu = true;  
         while (endmenu) {
+            endmenu = true; 
             System.out.println("Please select one of the options below: ");
             System.out.println("\n(1) View Data Sorted by Province");
             System.out.println("(2) View Data Sorted by Labour Type");
@@ -55,7 +66,12 @@ public class Simulator {
             String strChoice = key.readLine();
 
             if (strChoice.equals("1")){
+                System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
+                System.out.print("Input Province (case sensitive): ");
+                String choice = key.readLine();
+                DataSearch.provincesearch(datareader, choice);
 
+                endmenu = false; 
             } else if (strChoice.equals("2")){
 
             } else if (strChoice.equals("3")){
@@ -67,7 +83,9 @@ public class Simulator {
             } else if (strChoice.equals("6")){
                 
             } else {
-                
+                System.out.println("Invalid Input. Please try again.");
+                pause(500);
+                clearScreen();
             }
         }
     }
