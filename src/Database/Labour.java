@@ -1,18 +1,19 @@
 package Database;
 
-public class DataReader {
+public class Labour {
     private String date; 
     private String province; 
     private String labour; 
     private String sex; 
     private String population;
 
-    public DataReader(String date, String province, String labour, String sex, String population){
+    public Labour(String date, String province, String labour, String sex, String population){
         this.date = date; 
         this.province = province; 
         this.labour = labour; 
         this.sex = sex;
         this.population = population; 
+    
     }
     public String getdate() {
         return date;
