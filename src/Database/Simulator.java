@@ -26,13 +26,13 @@ public class Simulator {
         String line = "";
         DataReader data; 
         int count = 0; 
-        DataReader[] datareader = new DataReader[792];
+        DataReader[] datareader = new DataReader[528];
  
         BufferedReader file = new BufferedReader(new FileReader("src/Database/DataSet.csv"));
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));      
         
 
-        while(count < 792){
+        while(count < 528){
             line = file.readLine();
             String[] element = line.split(",");
 
@@ -70,10 +70,13 @@ public class Simulator {
                 System.out.print("Input Province (case sensitive): ");
                 String choice = key.readLine();
                 DataSearch.provincesearch(datareader, choice);
-
                 endmenu = false; 
             } else if (strChoice.equals("2")){
-
+                System.out.println("Enter the Labour Type\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
+                System.out.print("Input Province (case sensitive): ");
+                String choice = key.readLine();
+                DataSearch.provincesearch(datareader, choice);
+                endmenu = false;
             } else if (strChoice.equals("3")){
                 
             } else if (strChoice.equals("4")){

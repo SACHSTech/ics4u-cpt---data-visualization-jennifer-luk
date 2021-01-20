@@ -34,4 +34,7 @@ public class DataReader {
         return population;
     }
 
+    public String toString() {
+        return date + "|" + province + "|" + labour + "|" + sex + "|" + population;
+      }
 }
