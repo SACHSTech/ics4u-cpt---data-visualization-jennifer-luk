@@ -26,23 +26,47 @@ public class DataSearch {
       }
       return " ";
    }
-   public static String IndRecordSearch(DataReader[] array, String date, String name, String labtype, String sex){
-    String thename;
-    String thedate;
-    String thelabtype;
-    String thesex;
+
+  public static String datesearch(DataReader[] array, String choice){
+    String element;
 
       for(int i = 0; i < array.length; i++){
-          thedate = array[i].getdate();
-          thename = array[i].getprovince();		
-          thelabtype = array[i].getlabour();	
-          thesex = array[i].getsex();
-          if(thename.equals(name) && thedate.equals(date) && thelabtype.equals(labtype) && thesex.equals(sex)){
-              System.out.println(array[i].toString());
-          }
+        element = array[i].getdate();				
+        if(element.equals(choice)){
+            System.out.println(array[i].toString());
+        }
       }
-      return "Not a valid data entry";
+      return " ";
 
-}
-  
+  }
+  public static String sexsearch(DataReader[] array, String choice){
+    String element;
+
+      for(int i = 0; i < array.length; i++){
+        element = array[i].getsex());				
+        if(element.equals(choice)){
+            System.out.println(array[i].toString());
+        }
+      }
+      return " ";
+
+  }
+  public static String IndRecordSearch(DataReader[] array, String date, String name, String labtype, String sex){
+  String thename;
+  String thedate;
+  String thelabtype;
+  String thesex;
+
+    for(int i = 0; i < array.length; i++){
+        thedate = array[i].getdate();
+        thename = array[i].getprovince();		
+        thelabtype = array[i].getlabour();	
+        thesex = array[i].getsex();
+        if(thename.equals(name) && thedate.equals(date) && thelabtype.equals(labtype) && thesex.equals(sex)){
+            System.out.println(array[i].toString());
+        }
+    }
+    return "Not a valid data entry";
+
+  }
 }

@@ -89,9 +89,17 @@ public class Simulator {
                 endmenu = false;
                 
             } else if (strChoice.equals("3")){
-              
+                System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
+                String choice = key.readLine();
+                DataSearch.datesearch(datareader, choice);
+                endmenu = false;
+
             } else if (strChoice.equals("4")){
-                
+                System.out.print("Enter sex (Males, Females): ");
+                String choice = key.readLine();
+                DataSearch.sexsearch(datareader, choice);
+                endmenu = false;
+
             } else if (strChoice.equals("5")){
                 System.out.println("To view an individual record, enter all the following data");
                 System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
@@ -104,6 +112,8 @@ public class Simulator {
                 String sex2 = key.readLine();
                 DataSearch.IndRecordSearch(datareader, date2, name, labourtype, sex2);
                 endmenu = false;  
+            } else if (strChoice.equals("6")){
+              
             } else {
                 System.out.println("Invalid Input. Please try again.");
                 pause(500);
