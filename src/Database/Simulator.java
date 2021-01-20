@@ -51,20 +51,23 @@ public class Simulator {
         file.close();
         
         System.out.println("\nWelcome to the Stats Canada Labour Force Characteristics System");
+        System.out.println("The following database contains data from January 2019 to September 2020, with records measured on a 4 month basis.\nWith the data, ");
         boolean endmenu = true;  
         while (endmenu) {
             endmenu = true; 
             System.out.println("Please select one of the options below: ");
             System.out.println("\n(1) View Data Sorted by Province");
             System.out.println("(2) View Data Sorted by Labour Type");
-            System.out.println("(3) View Data with Filters");
-            System.out.println("(4) View an Individual Record by Month & Year");
-            System.out.println("(5) View Summary Report");
-            System.out.println("(6) View Charts");
+            System.out.println("(3) View Data Sorted by Date");
+            System.out.println("(4) View Data Sorted by Sex");
+            System.out.println("(5) View Data with Multiple Filters");
+            System.out.println("(5) View an Individual Record");
+            System.out.println("(6) View Summary Report");
+            System.out.println("(7) View Charts");
 
             System.out.print("Input Choice: ");
             String strChoice = key.readLine();
-
+            clearScreen();
             if (strChoice.equals("1")){
                 System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                 System.out.print("Input Province (case sensitive): ");
@@ -72,19 +75,35 @@ public class Simulator {
                 DataSearch.provincesearch(datareader, choice);
                 endmenu = false; 
             } else if (strChoice.equals("2")){
-                System.out.println("Enter the Labour Type\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
-                System.out.print("Input Province (case sensitive): ");
+                System.out.println("Enter the Labour Type\n- Employment\n- Unemployment");
+                System.out.print("Input Labour Type (case sensitive): ");
                 String choice = key.readLine();
-                DataSearch.provincesearch(datareader, choice);
+                if (choice.equals("Employment")) {
+                    System.out.println("Choose a filter to view data by:\n- Employment\n- Part-time employment\n- Full-time employment");
+                    System.out.print("Input Filter (case sensitive): ");
+                    choice = key.readLine();
+                    DataSearch.laboursearch(datareader, choice);
+                } else if (choice.equals("Unemployment")){
+                    DataSearch.laboursearch(datareader, choice);
+                }
                 endmenu = false;
-            } else if (strChoice.equals("3")){
                 
+            } else if (strChoice.equals("3")){
+              
             } else if (strChoice.equals("4")){
                 
             } else if (strChoice.equals("5")){
-                
-            } else if (strChoice.equals("6")){
-                
+                System.out.println("To view an individual record, enter all the following data");
+                System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
+                String date2 = key.readLine();
+                System.out.print("Enter province name (Case sensitive, ex. Ontario): ");
+                String name = key.readLine();
+                System.out.print("Enter labour type (Case sensitive, ex. Employment, Part-time employment, Full-time employment, Unemployment)");
+                String labourtype = key.readLine(); 
+                System.out.print("Enter sex: ");
+                String sex2 = key.readLine();
+                DataSearch.IndRecordSearch(datareader, date2, name, labourtype, sex2);
+                endmenu = false;  
             } else {
                 System.out.println("Invalid Input. Please try again.");
                 pause(500);
