@@ -5,9 +5,9 @@ public class DataReader {
     private String province; 
     private String labour; 
     private String sex; 
-    private String population;
+    private Double population;
 
-    public DataReader (String date, String province, String labour, String sex, String population){
+    public DataReader (String date, String province, String labour, String sex, Double population){
         this.date = date; 
         this.province = province; 
         this.labour = labour; 
@@ -30,7 +30,7 @@ public class DataReader {
         return sex;
     }
 
-    public String population() {
+    public Double getpopulation() {
         return population;
     }
 

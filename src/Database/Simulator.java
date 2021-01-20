@@ -22,7 +22,7 @@ public class Simulator {
         String province;
         String labour;
         String sex;
-        String population; 
+        Double population; 
         String line = "";
         DataReader data; 
         int count = 0; 
@@ -40,7 +40,7 @@ public class Simulator {
             province = element[1];
             labour = element[2];
             sex = element[3];
-            population = element[4];
+            population =  Double.parseDouble(element[4]);
             
             data = new DataReader(date, province, labour, sex, population);
             
@@ -58,12 +58,12 @@ public class Simulator {
             System.out.println("Please select one of the options below: ");
             System.out.println("\n(1) View Data Sorted by Province");
             System.out.println("(2) View Data Sorted by Labour Type");
-            System.out.println("(3) View Data Sorted by Date");
+            System.out.println("(3) View Data Sorted by Population");
             System.out.println("(4) View Data Sorted by Sex");
             System.out.println("(5) View Data with Multiple Filters");
-            System.out.println("(5) View an Individual Record");
-            System.out.println("(6) View Summary Report");
-            System.out.println("(7) View Charts");
+            System.out.println("(6) View an Individual Record");
+            System.out.println("(7) View Summary Report");
+            System.out.println("(8) View Charts");
 
             System.out.print("Input Choice: ");
             String strChoice = key.readLine();
@@ -89,18 +89,29 @@ public class Simulator {
                 endmenu = false;
                 
             } else if (strChoice.equals("3")){
-                System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
+                System.out.print("(1) Sort by lowest to highest\n(2) Sort by highest to lowest");
                 String choice = key.readLine();
-                DataSearch.datesearch(datareader, choice);
+                if (choice.equals("1")){
+                   DataSort.sortLow(datareader);
+                   for (int i = 0; i < datareader.length; i++) {
+                        System.out.println(datareader[i]);
+                   }
+                } else if (choice.equals("2")){
+                    DataSort.sortHigh(datareader);
+                    for (int i = 0; i < datareader.length; i++) {
+                        System.out.println(datareader[i]);
+                   }
+                }
                 endmenu = false;
-
+               
             } else if (strChoice.equals("4")){
                 System.out.print("Enter sex (Males, Females): ");
                 String choice = key.readLine();
                 DataSearch.sexsearch(datareader, choice);
                 endmenu = false;
-
             } else if (strChoice.equals("5")){
+
+            } else if (strChoice.equals("6")){
                 System.out.println("To view an individual record, enter all the following data");
                 System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                 String date2 = key.readLine();
@@ -112,7 +123,9 @@ public class Simulator {
                 String sex2 = key.readLine();
                 DataSearch.IndRecordSearch(datareader, date2, name, labourtype, sex2);
                 endmenu = false;  
-            } else if (strChoice.equals("6")){
+            } else if (strChoice.equals("7")){
+
+            } else if (strChoice.equals("8")){
               
             } else {
                 System.out.println("Invalid Input. Please try again.");

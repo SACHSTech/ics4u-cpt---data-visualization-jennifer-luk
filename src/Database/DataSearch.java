@@ -43,7 +43,7 @@ public class DataSearch {
     String element;
 
       for(int i = 0; i < array.length; i++){
-        element = array[i].getsex());				
+        element = array[i].getsex();				
         if(element.equals(choice)){
             System.out.println(array[i].toString());
         }
