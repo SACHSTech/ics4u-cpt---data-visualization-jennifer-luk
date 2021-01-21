@@ -19,11 +19,16 @@ public class Simulator {
     }  
     public static void main(String[] args) throws IOException{
         String date;
+        String date2 = "";
         String province;
         String labour;
+        String labourtype = "";
         String sex;
+        String sex2 = "";
         Double population; 
         String line = "";
+        String name = "";
+        String choice; 
         DataReader data; 
         int count = 0; 
         DataReader[] datareader = new DataReader[528];
@@ -71,13 +76,13 @@ public class Simulator {
             if (strChoice.equals("1")){
                 System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                 System.out.print("Input Province (case sensitive): ");
-                String choice = key.readLine();
+                choice = key.readLine();
                 DataSearch.provincesearch(datareader, choice);
                 endmenu = false; 
             } else if (strChoice.equals("2")){
                 System.out.println("Enter the Labour Type\n- Employment\n- Unemployment");
                 System.out.print("Input Labour Type (case sensitive): ");
-                String choice = key.readLine();
+                choice = key.readLine();
                 if (choice.equals("Employment")) {
                     System.out.println("Choose a filter to view data by:\n- Employment\n- Part-time employment\n- Full-time employment");
                     System.out.print("Input Filter (case sensitive): ");
@@ -90,7 +95,7 @@ public class Simulator {
                 
             } else if (strChoice.equals("3")){
                 System.out.print("(1) Sort by lowest to highest\n(2) Sort by highest to lowest");
-                String choice = key.readLine();
+                choice = key.readLine();
                 if (choice.equals("1")){
                    DataSort.sortLow(datareader);
                    for (int i = 0; i < datareader.length; i++) {
@@ -106,21 +111,68 @@ public class Simulator {
                
             } else if (strChoice.equals("4")){
                 System.out.print("Enter sex (Males, Females): ");
-                String choice = key.readLine();
+                choice = key.readLine();
                 DataSearch.sexsearch(datareader, choice);
                 endmenu = false;
             } else if (strChoice.equals("5")){
+                boolean endmenu2 = true; 
+                int count2 = 0;
+                String[] filter = new String[4];
+                 while (endmenu2) {
+                    System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Finished filters");
+                    filter[count2] = key.readLine();
+                    if(filter[count2].equals("1")){
+                        System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
+                        date2 = key.readLine();
+                        count2++; 
+                    } else if (filter[count2].equals("2")){
+                        System.out.print("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
+                        name = key.readLine();
+                        count2++; 
+                    } else if (filter[count2].equals("3")) {
+                        System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
+                        labourtype = key.readLine();
+                        count2++;
+                    } else if (filter[count2].equals("4")) {
+                        System.out.print("Enter sex (Case Sensitive): \n- Males\n- Females");
+                        sex2 = key.readLine();
+                        count2++;
+                    } else if (filter[count2].equals("5")) {
+                        System.out.println("Processing filters...");
+                        pause(500);
+                        endmenu2 = false; 
+                    }
+                }
+                for (int i = 0; i < count2; i++) {
 
+                    if (count2 == 1) {
+                        if(filter[count2].equals("1")){
+                            DataSearch.datesearch(datareader, date2);
+                        } else if (filter[count2].equals("2")){
+                            DataSearch.provincesearch(datareader, name); 
+                        } else if (filter[count2].equals("3")) {
+                            DataSearch.laboursearch(datareader, labourtype);
+                        } else if (filter[count2].equals("4")) {
+                        DataSearch.sexsearch(datareader, sex2);
+                        } 
+                    } else if (count2 == 2) {
+                        
+                    } else if (count2 == 3) {
+
+                    } else if (count2 == 4) {
+
+                    }
+                }
             } else if (strChoice.equals("6")){
                 System.out.println("To view an individual record, enter all the following data");
                 System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
-                String date2 = key.readLine();
-                System.out.print("Enter province name (Case sensitive, ex. Ontario): ");
-                String name = key.readLine();
+                date2 = key.readLine();
+                System.out.print("Enter province name (Case sensitive): ");
+                name = key.readLine();
                 System.out.print("Enter labour type (Case sensitive, ex. Employment, Part-time employment, Full-time employment, Unemployment)");
-                String labourtype = key.readLine(); 
+                labourtype = key.readLine(); 
                 System.out.print("Enter sex: ");
-                String sex2 = key.readLine();
+                sex2 = key.readLine();
                 DataSearch.IndRecordSearch(datareader, date2, name, labourtype, sex2);
                 endmenu = false;  
             } else if (strChoice.equals("7")){
@@ -134,6 +186,7 @@ public class Simulator {
             }
         }
     }
+
 }
 
 
