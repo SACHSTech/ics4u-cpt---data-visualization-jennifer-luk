@@ -31,7 +31,7 @@ public class Simulator {
         String choice; 
         DataReader data; 
         int count = 0; 
-        DataReader[] datareader = new DataReader[528];
+        DataReader[] datareader = new DataReader[480];
  
         BufferedReader file = new BufferedReader(new FileReader("src/Database/DataSet.csv"));
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));      
@@ -122,11 +122,11 @@ public class Simulator {
                     System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Finished filters");
                     filter[count2] = key.readLine();
                     if(filter[count2].equals("1")){
-                        System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
+                        System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
                         count2++; 
                     } else if (filter[count2].equals("2")){
-                        System.out.print("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
+                        System.out.println("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                         name = key.readLine();
                         count2++; 
                     } else if (filter[count2].equals("3")) {
@@ -134,7 +134,7 @@ public class Simulator {
                         labourtype = key.readLine();
                         count2++;
                     } else if (filter[count2].equals("4")) {
-                        System.out.print("Enter sex (Case Sensitive): \n- Males\n- Females");
+                        System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
                         count2++;
                     } else if (filter[count2].equals("5")) {
@@ -143,26 +143,8 @@ public class Simulator {
                         endmenu2 = false; 
                     }
                 }
-                for (int i = 0; i < count2; i++) {
+                  
 
-                    if (count2 == 1) {
-                        if(filter[count2].equals("1")){
-                            DataSearch.datesearch(datareader, date2);
-                        } else if (filter[count2].equals("2")){
-                            DataSearch.provincesearch(datareader, name); 
-                        } else if (filter[count2].equals("3")) {
-                            DataSearch.laboursearch(datareader, labourtype);
-                        } else if (filter[count2].equals("4")) {
-                        DataSearch.sexsearch(datareader, sex2);
-                        } 
-                    } else if (count2 == 2) {
-                        
-                    } else if (count2 == 3) {
-
-                    } else if (count2 == 4) {
-
-                    }
-                }
             } else if (strChoice.equals("6")){
                 System.out.println("To view an individual record, enter all the following data");
                 System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
@@ -176,7 +158,21 @@ public class Simulator {
                 DataSearch.IndRecordSearch(datareader, date2, name, labourtype, sex2);
                 endmenu = false;  
             } else if (strChoice.equals("7")){
-
+                System.out.println("------------------- Summary Report -------------------");
+                System.out.println("Total number of records: " + datareader.length);
+                System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
+                System.out.println("--- 2019 Summary ---");
+                System.out.println("Average Employment in 2019(Total): ");
+                System.out.println("Average Employment in 2019(Males): ");
+                System.out.println("Average Employment in 2019(Females): ");
+                System.out.println("Average Unemployment in 2019(Total): ");
+                System.out.println("Average Unemployment in 2019(Males): ");
+                System.out.println("Average Unemployment in 2019(Females): ");
+                System.out.println("Highest Employment Rate in 2019");
+                System.out.println("Lowest Employment Rate in 2019");
+                System.out.println("Highest Unemployment Rate in 2019");
+                System.out.println("Highest Unemployment Rate in 2019");
+               
             } else if (strChoice.equals("8")){
               
             } else {

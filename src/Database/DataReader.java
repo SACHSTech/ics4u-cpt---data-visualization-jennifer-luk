@@ -30,7 +30,7 @@ public class DataReader {
         return sex;
     }
 
-    public Double getpopulation() {
+    public double getpopulation() {
         return population;
     }
 
