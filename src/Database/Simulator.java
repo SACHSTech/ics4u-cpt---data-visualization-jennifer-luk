@@ -116,28 +116,23 @@ public class Simulator {
                 endmenu = false;
             } else if (strChoice.equals("5")){
                 boolean endmenu2 = true; 
-                int count2 = 0;
-                String[] filter = new String[4];
-                 while (endmenu2) {
-                    System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Finished filters");
-                    filter[count2] = key.readLine();
-                    if(filter[count2].equals("1")){
+                while (endmenu2) {
+                    System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Stop Filtering");
+                     choice= key.readLine();
+                    if(choice.equals("1")){
                         System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
-                        count2++; 
-                    } else if (filter[count2].equals("2")){
+                        DataSearch.datesearch(datareader, choice);
+                    } else if (choice.equals("2")){
                         System.out.println("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                         name = key.readLine();
-                        count2++; 
-                    } else if (filter[count2].equals("3")) {
+                    } else if (choice.equals("3")) {
                         System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
-                        count2++;
-                    } else if (filter[count2].equals("4")) {
+                    } else if (choice.equals("4")) {
                         System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
-                        count2++;
-                    } else if (filter[count2].equals("5")) {
+                    } else if (choice.equals("5")) {
                         System.out.println("Processing filters...");
                         pause(500);
                         endmenu2 = false; 
@@ -162,7 +157,7 @@ public class Simulator {
                 System.out.println("Total number of records: " + datareader.length);
                 System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
                 System.out.println("--- 2019 Summary ---");
-                System.out.println("Average Employment in 2019(Total): ");
+                System.out.println("Average Employment in 2019(Total): " + DataSort.AverageLabour(datareader, "Employment", "2019"));
                 System.out.println("Average Employment in 2019(Males): ");
                 System.out.println("Average Employment in 2019(Females): ");
                 System.out.println("Average Unemployment in 2019(Total): ");

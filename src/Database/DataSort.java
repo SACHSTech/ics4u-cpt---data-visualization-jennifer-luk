@@ -1,6 +1,5 @@
 package Database;
 
-import java.util.Arrays;
 
 public class DataSort {
     
@@ -51,24 +50,21 @@ public class DataSort {
         return array;
 
     }
-    public static double AverageLabour(DataReader[] array, String choice){
+    public static double AverageLabour(DataReader[] array, String choice, String date){
     String element; 
+    String dateelement; 
     int sum = 0; 
-    DataReader[] average;
+    int n =0;
         for(int i = 0; i < array.length; i++){
-            element = array[i].getlabour();				
-            if(element.equals(choice)){
-                average = array[i]; 
+            element = array[i].getlabour();	
+            dateelement = array[i].getdate().substring(0, 4);
+            if(element.equals(choice) && dateelement.equals(date)){
+                n++;
+                sum += array[i].getpopulation();
             }
         }
-        int n = average.length;
-        for (int i = 0; i < n; i++) {
-            sum += average[i].getpopulation();
-        }
-        return sum / n;
+    return sum / n;    
 
     }
-    
-
 }
 
