@@ -1,6 +1,5 @@
 package Database;
 
-import java.util.*; 
 import java.util.ArrayList;
 
 public class DataSearch {
@@ -12,7 +11,7 @@ public class DataSearch {
       for(int i = 0; i < array.length; i++){
         element = array[i].getprovince();				
         if(element.equals(choice)){
-            temporary.addAll(Arrays.asList(array[i]));
+            temporary.add(array[i]);
          }
       }
      
@@ -26,7 +25,7 @@ public class DataSearch {
     for(int i = 0; i < array.length; i++){
       element = array[i].getlabour();				
       if(element.equals(choice)){
-          temporary.addAll(Arrays.asList(array[i]));
+          temporary.add(array[i]);
        }
     }
    
@@ -38,9 +37,9 @@ public class DataSearch {
     ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
     for(int i = 0; i < array.length; i++){
-      element = array[i].getlabour();				
+      element = array[i].getdate();				
       if(element.equals(choice)){
-          temporary.addAll(Arrays.asList(array[i]));
+          temporary.add(array[i]);
        }
     }
    
@@ -52,9 +51,9 @@ public class DataSearch {
     ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
     for(int i = 0; i < array.length; i++){
-      element = array[i].getlabour();				
+      element = array[i].getsex();				
       if(element.equals(choice)){
-          temporary.addAll(Arrays.asList(array[i]));
+          temporary.add(array[i]);
        }
     }
    

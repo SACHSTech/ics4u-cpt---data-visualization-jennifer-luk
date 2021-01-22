@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import javafx.application.Application;
+
 public class Simulator {
 
     // method to pause console
@@ -137,46 +139,38 @@ public class Simulator {
             } else if (strChoice.equals("5")){
                 boolean endmenu2 = true; 
                 str ="";
-                DataReader[] temporary = datareader;
+                ArrayList<DataReader> temporary = new ArrayList<DataReader>();
                 while (endmenu2) {
                     
                     System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Stop Filtering");
                     choice= key.readLine();
-                    int n = 0; 
                     if(choice.equals("1")){
                         System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
-                        for (int i = n; i < DataSearch.datesearch(temporary, choice).size(); i++) {
-                            temporary[i] = DataSearch.datesearch(temporary, choice).get(i);
-                        }
-                        
-                        str = str + DataSearch.datesearch(temporary, choice).toString();
-                        System.out.println(str);
+                        temporary.addAll(DataSearch.datesearch(datareader, date2));
+
+
                     } else if (choice.equals("2")){
                         System.out.println("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                         name = key.readLine();
-                        temporary = (DataReader[]) (DataSearch.provincesearch(temporary, choice)).toArray();
-                        str = str + DataSearch.provincesearch(temporary, choice).toString();
+                        temporary.addAll(DataSearch.provincesearch(datareader, date2));
                                  
                     } else if (choice.equals("3")) {
                         System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
-                        temporary = (DataReader[]) (DataSearch.laboursearch(temporary, choice)).toArray();
-                        str = str + DataSearch.laboursearch(temporary, choice).toString();
+                        temporary.addAll(DataSearch.laboursearch(datareader, date2));
  
                     } else if (choice.equals("4")) {
                         System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
-                        temporary = (DataReader[]) (DataSearch.sexsearch(temporary, choice)).toArray();
-                        str = str + DataSearch.sexsearch(temporary, choice).toString();
+                        temporary.addAll(DataSearch.sexsearch(datareader, date2));
                          
                     } else if (choice.equals("5")) {
                         System.out.println("Processing filters...");
                         pause(500);
-                        ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
-                        for(int i = 0; i < list.size(); i++){
-                            System.out.println(list.get(i).toString());
-                        }
+                     
+                        System.out.println(temporary);
+
                         endmenu2 = false; 
                     }
                 }
@@ -223,7 +217,15 @@ public class Simulator {
                 System.out.println("Lowest Unemployment Rate in 2020: " + DataSort.smallest(datareader, "Unemployment", "2020"));
                 endmenu = false;
             } else if (strChoice.equals("8")){
-              
+                System.out.println("(1)For line chart \n(2) For table view");
+                choice  = key.readLine();
+                if (choice.equals("1")) {
+                    Application.launch(args);
+                }
+    
+                if (choice.equals("2")) {
+    
+                }
             } else {
                 System.out.println("Invalid Input. Please try again.");
                 pause(500);
