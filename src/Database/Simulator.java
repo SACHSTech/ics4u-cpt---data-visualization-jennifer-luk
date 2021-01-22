@@ -37,7 +37,7 @@ public class Simulator {
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));      
         
 
-        while(count < 528){
+        while(count < 480){
             line = file.readLine();
             String[] element = line.split(",");
 
@@ -77,8 +77,9 @@ public class Simulator {
                 System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                 System.out.print("Input Province (case sensitive): ");
                 choice = key.readLine();
-                DataSearch.provincesearch(datareader, choice);
+                System.out.println(DataSearch.provincesearch(datareader, choice).toString());
                 endmenu = false; 
+
             } else if (strChoice.equals("2")){
                 System.out.println("Enter the Labour Type\n- Employment\n- Unemployment");
                 System.out.print("Input Labour Type (case sensitive): ");
@@ -114,6 +115,7 @@ public class Simulator {
                 choice = key.readLine();
                 DataSearch.sexsearch(datareader, choice);
                 endmenu = false;
+
             } else if (strChoice.equals("5")){
                 boolean endmenu2 = true; 
                 while (endmenu2) {
@@ -126,6 +128,7 @@ public class Simulator {
                     } else if (choice.equals("2")){
                         System.out.println("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                         name = key.readLine();
+                        DataSearch.provincesearch(datareader, choice);
                     } else if (choice.equals("3")) {
                         System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
@@ -156,18 +159,30 @@ public class Simulator {
                 System.out.println("------------------- Summary Report -------------------");
                 System.out.println("Total number of records: " + datareader.length);
                 System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
-                System.out.println("--- 2019 Summary ---");
+                System.out.println("\n----------- 2019 Summary -----------");
                 System.out.println("Average Employment in 2019(Total): " + DataSort.AverageLabour(datareader, "Employment", "2019"));
-                System.out.println("Average Employment in 2019(Males): ");
-                System.out.println("Average Employment in 2019(Females): ");
-                System.out.println("Average Unemployment in 2019(Total): ");
-                System.out.println("Average Unemployment in 2019(Males): ");
-                System.out.println("Average Unemployment in 2019(Females): ");
-                System.out.println("Highest Employment Rate in 2019");
-                System.out.println("Lowest Employment Rate in 2019");
-                System.out.println("Highest Unemployment Rate in 2019");
-                System.out.println("Highest Unemployment Rate in 2019");
-               
+                System.out.println("Average Employment in 2019(Males): " + DataSort.AverageLabourSex(datareader, "Employment", "2019", "Males"));
+                System.out.println("Average Employment in 2019(Females): " + DataSort.AverageLabourSex(datareader, "Employment", "2019", "Females"));
+                System.out.println("Average Unemployment in 2019(Total): " + DataSort.AverageLabour(datareader, "Unemployment", "2019"));
+                System.out.println("Average Unemployment in 2019(Males): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2019", "Males"));
+                System.out.println("Average Unemployment in 2019(Females): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2019", "Females"));
+                System.out.println("Highest Employment Rate in 2019: " + DataSort.largest(datareader, "Employment", "2019"));
+                System.out.println("Lowest Employment Rate in 2019: "+ DataSort.smallest(datareader, "Employment", "2019"));
+                System.out.println("Highest Unemployment Rate in 2019: " + DataSort.largest(datareader, "Unemployment", "2019"));
+                System.out.println("Lowest Unemployment Rate in 2019: " + DataSort.smallest(datareader, "Unemployment", "2019"));
+                
+                System.out.println("\n----------- 2020 Summary -----------");
+                System.out.println("Average Employment in 2020(Total): " + DataSort.AverageLabour(datareader, "Employment", "2020"));
+                System.out.println("Average Employment in 2020(Males): " + DataSort.AverageLabourSex(datareader, "Employment", "2020", "Males"));
+                System.out.println("Average Employment in 2020(Females): " + DataSort.AverageLabourSex(datareader, "Employment", "2020", "Females"));
+                System.out.println("Average Unemployment in 2020(Total): " + DataSort.AverageLabour(datareader, "Unemployment", "2020"));
+                System.out.println("Average Unemployment in 2020(Males): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2020", "Males"));
+                System.out.println("Average Unemployment in 2020(Females): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2020", "Females"));
+                System.out.println("Highest Employment Rate in 2020: " + DataSort.largest(datareader, "Employment", "2020"));
+                System.out.println("Lowest Employment Rate in 2020: "+ DataSort.smallest(datareader, "Employment", "2020"));
+                System.out.println("Highest Unemployment Rate in 2020: " + DataSort.largest(datareader, "Unemployment", "2020"));
+                System.out.println("Lowest Unemployment Rate in 2020: " + DataSort.smallest(datareader, "Unemployment", "2020"));
+                endmenu = false;
             } else if (strChoice.equals("8")){
               
             } else {

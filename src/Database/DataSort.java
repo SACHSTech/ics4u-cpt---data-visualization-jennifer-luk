@@ -2,7 +2,7 @@ package Database;
 
 
 public class DataSort {
-    
+
     public static DataReader[] sortLow(DataReader[] array){
 
         int currentlowest;
@@ -50,21 +50,79 @@ public class DataSort {
         return array;
 
     }
-    public static double AverageLabour(DataReader[] array, String choice, String date){
-    String element; 
-    String dateelement; 
-    int sum = 0; 
-    int n =0;
+    public static double AverageLabour(DataReader[] array, String choice, String date) {
+        String element; 
+        String dateelement; 
+        double sum = 0; 
+        int n = 0;
+        for (int i = 0; i < array.length; i++) {
+            element = array[i].getlabour();	
+            dateelement = array[i].getdate().substring(0, 4);
+            if (element.equals(choice) && dateelement.equals(date)) {
+                n++;
+                sum += array[i].getpopulation();
+            }                              
+        }
+
+        return Math.round((sum / n) * 100.0) / 100.0;    
+
+    }
+    public static double AverageLabourSex(DataReader[] array, String choice, String date, String sex){
+        String element; 
+        String dateelement; 
+        String sexelement;
+        double sum = 0; 
+        int n = 0;
         for(int i = 0; i < array.length; i++){
             element = array[i].getlabour();	
             dateelement = array[i].getdate().substring(0, 4);
-            if(element.equals(choice) && dateelement.equals(date)){
+            sexelement = array[i].getsex();
+            if(element.equals(choice) && dateelement.equals(date) && sexelement.equals(sex)){
                 n++;
                 sum += array[i].getpopulation();
             }
         }
-    return sum / n;    
-
+        return Math.round((sum / n) * 100.0) / 100.0;    
+    
     }
+    public static double largest(DataReader[] array, String choice, String date){
+        String element; 
+        String dateelement; 
+        double currentmax = 0;
+
+        for(int i = 0; i < array.length; i++){
+            element = array[i].getlabour();	
+            dateelement = array[i].getdate().substring(0, 4);
+            
+            if(element.equals(choice) && dateelement.equals(date)){ 
+                if (array[i].getpopulation() > currentmax) {
+                    currentmax = array[i].getpopulation();
+                }             
+            }
+        }
+            return currentmax;  
+    }
+    public static double smallest(DataReader[] array, String choice, String date){
+        String element; 
+        String dateelement; 
+        double currentmin = 0;
+
+        for(int i = 0; i < array.length; i++){
+            element = array[i].getlabour();	
+            dateelement = array[i].getdate().substring(0, 4);
+            
+            if(element.equals(choice) && dateelement.equals(date)){ 
+                if (i == 1){
+                    currentmin = array[i].getpopulation();
+                }
+                else if (array[i].getpopulation() < currentmin) {
+                    currentmin = array[i].getpopulation();
+                }             
+            }
+        }
+        return currentmin;  
+    }
+               
+
 }
 
