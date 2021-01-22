@@ -1,6 +1,8 @@
 package Database;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Simulator {
 
@@ -25,6 +27,7 @@ public class Simulator {
         String labourtype = "";
         String sex;
         String sex2 = "";
+        String str;
         Double population; 
         String line = "";
         String name = "";
@@ -56,7 +59,7 @@ public class Simulator {
         file.close();
         
         System.out.println("\nWelcome to the Stats Canada Labour Force Characteristics System");
-        System.out.println("The following database contains data from January 2019 to September 2020, with records measured on a 4 month basis.\nWith the data, ");
+        System.out.println("The following database contains data from January 2019 to September 2020, with records measured on a 4 month basis.\n");
         boolean endmenu = true;  
         while (endmenu) {
             endmenu = true; 
@@ -77,9 +80,12 @@ public class Simulator {
                 System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                 System.out.print("Input Province (case sensitive): ");
                 choice = key.readLine();
-                System.out.println(DataSearch.provincesearch(datareader, choice).toString());
+                str = DataSearch.provincesearch(datareader, choice).toString();
+                ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
+                for(int i = 0; i < list.size(); i++){
+                    System.out.println(list.get(i).toString());
+                }
                 endmenu = false; 
-
             } else if (strChoice.equals("2")){
                 System.out.println("Enter the Labour Type\n- Employment\n- Unemployment");
                 System.out.print("Input Labour Type (case sensitive): ");
@@ -88,9 +94,17 @@ public class Simulator {
                     System.out.println("Choose a filter to view data by:\n- Employment\n- Part-time employment\n- Full-time employment");
                     System.out.print("Input Filter (case sensitive): ");
                     choice = key.readLine();
-                    DataSearch.laboursearch(datareader, choice);
+                    str = DataSearch.laboursearch(datareader, choice).toString();
+                    ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
+                    for(int i = 0; i < list.size(); i++){
+                        System.out.println(list.get(i).toString());
+                    }
                 } else if (choice.equals("Unemployment")){
-                    DataSearch.laboursearch(datareader, choice);
+                    str = DataSearch.laboursearch(datareader, choice).toString();
+                    ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
+                    for(int i = 0; i < list.size(); i++){
+                        System.out.println(list.get(i).toString());
+                    }
                 }
                 endmenu = false;
                 
@@ -113,31 +127,56 @@ public class Simulator {
             } else if (strChoice.equals("4")){
                 System.out.print("Enter sex (Males, Females): ");
                 choice = key.readLine();
-                DataSearch.sexsearch(datareader, choice);
+                str = DataSearch.sexsearch(datareader, choice).toString();
+                ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
+                for(int i = 0; i < list.size(); i++){
+                    System.out.println(list.get(i).toString());
+                }
                 endmenu = false;
 
             } else if (strChoice.equals("5")){
                 boolean endmenu2 = true; 
+                str ="";
+                DataReader[] temporary = datareader;
                 while (endmenu2) {
+                    
                     System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Stop Filtering");
-                     choice= key.readLine();
+                    choice= key.readLine();
+                    int n = 0; 
                     if(choice.equals("1")){
                         System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
-                        DataSearch.datesearch(datareader, choice);
+                        for (int i = n; i < DataSearch.datesearch(temporary, choice).size(); i++) {
+                            temporary[i] = DataSearch.datesearch(temporary, choice).get(i);
+                        }
+                        
+                        str = str + DataSearch.datesearch(temporary, choice).toString();
+                        System.out.println(str);
                     } else if (choice.equals("2")){
                         System.out.println("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                         name = key.readLine();
-                        DataSearch.provincesearch(datareader, choice);
+                        temporary = (DataReader[]) (DataSearch.provincesearch(temporary, choice)).toArray();
+                        str = str + DataSearch.provincesearch(temporary, choice).toString();
+                                 
                     } else if (choice.equals("3")) {
                         System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
+                        temporary = (DataReader[]) (DataSearch.laboursearch(temporary, choice)).toArray();
+                        str = str + DataSearch.laboursearch(temporary, choice).toString();
+ 
                     } else if (choice.equals("4")) {
                         System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
+                        temporary = (DataReader[]) (DataSearch.sexsearch(temporary, choice)).toArray();
+                        str = str + DataSearch.sexsearch(temporary, choice).toString();
+                         
                     } else if (choice.equals("5")) {
                         System.out.println("Processing filters...");
                         pause(500);
+                        ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
+                        for(int i = 0; i < list.size(); i++){
+                            System.out.println(list.get(i).toString());
+                        }
                         endmenu2 = false; 
                     }
                 }
@@ -191,6 +230,7 @@ public class Simulator {
                 clearScreen();
             }
         }
+        
     }
 
 }

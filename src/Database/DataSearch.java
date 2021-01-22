@@ -19,40 +19,46 @@ public class DataSearch {
       return temporary; 
   }
 
-  public static String laboursearch(DataReader[] array, String choice){
+  public static ArrayList<DataReader> laboursearch(DataReader[] array, String choice){
     String element;
+    ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
-      for(int i = 0; i < array.length; i++){
-        element = array[i].getlabour();				
-        if(element.equals(choice)){
-            System.out.println(array[i].toString());
-        }
-      }
-      return " ";
+    for(int i = 0; i < array.length; i++){
+      element = array[i].getlabour();				
+      if(element.equals(choice)){
+          temporary.addAll(Arrays.asList(array[i]));
+       }
+    }
+   
+    return temporary; 
    }
 
-  public static String datesearch(DataReader[] array, String choice){
+  public static ArrayList<DataReader> datesearch(DataReader[] array, String choice){
     String element;
+    ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
-      for(int i = 0; i < array.length; i++){
-        element = array[i].getdate();				
-        if(element.equals(choice)){
-            System.out.println(array[i].toString());
-        }
-      }
-      return " ";
+    for(int i = 0; i < array.length; i++){
+      element = array[i].getlabour();				
+      if(element.equals(choice)){
+          temporary.addAll(Arrays.asList(array[i]));
+       }
+    }
+   
+    return temporary; 
 
   }
-  public static String sexsearch(DataReader[] array, String choice){
+  public static ArrayList<DataReader> sexsearch(DataReader[] array, String choice){
     String element;
+    ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
-      for(int i = 0; i < array.length; i++){
-        element = array[i].getsex();				
-        if(element.equals(choice)){
-            System.out.println(array[i].toString());
-        }
-      }
-      return " ";
+    for(int i = 0; i < array.length; i++){
+      element = array[i].getlabour();				
+      if(element.equals(choice)){
+          temporary.addAll(Arrays.asList(array[i]));
+       }
+    }
+   
+    return temporary; 
 
   }
   public static String IndRecordSearch(DataReader[] array, String date, String name, String labtype, String sex){
