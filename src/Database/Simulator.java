@@ -108,7 +108,7 @@ public class Simulator extends Application {
                 System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                 System.out.print("Input Province (case sensitive): ");
                 choice = key.readLine();
-                str = DataSearch.provincesearch(datareader, choice).toString();
+                str = DataInteraction.provincesearch(datareader, choice).toString();
                 ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                 for(int i = 0; i < list.size(); i++){
                     System.out.println(list.get(i).toString());
@@ -123,13 +123,13 @@ public class Simulator extends Application {
                     System.out.println("Choose a filter to view data by:\n- Employment\n- Part-time employment\n- Full-time employment");
                     System.out.print("Input Filter (case sensitive): ");
                     choice = key.readLine();
-                    str = DataSearch.laboursearch(datareader, choice).toString();
+                    str = DataInteraction.laboursearch(datareader, choice).toString();
                     ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                     for(int i = 0; i < list.size(); i++){
                         System.out.println(list.get(i).toString());
                     }
                 } else if (choice.equals("Unemployment")){
-                    str = DataSearch.laboursearch(datareader, choice).toString();
+                    str = DataInteraction.laboursearch(datareader, choice).toString();
                     ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                     for(int i = 0; i < list.size(); i++){
                         System.out.println(list.get(i).toString());
@@ -141,12 +141,12 @@ public class Simulator extends Application {
                 System.out.print("(1) Sort by lowest to highest\n(2) Sort by highest to lowest");
                 choice = key.readLine();
                 if (choice.equals("1")){
-                   DataSort.sortLow(datareader);
+                   DataInteraction.sortLow(datareader);
                    for (int i = 0; i < datareader.length; i++) {
                         System.out.println(datareader[i]);
                    }
                 } else if (choice.equals("2")){
-                    DataSort.sortHigh(datareader);
+                    DataInteraction.sortHigh(datareader);
                     for (int i = 0; i < datareader.length; i++) {
                         System.out.println(datareader[i]);
                    }
@@ -156,7 +156,7 @@ public class Simulator extends Application {
             } else if (strChoice.equals("4")){
                 System.out.print("Enter sex (Males, Females): ");
                 choice = key.readLine();
-                str = DataSearch.sexsearch(datareader, choice).toString();
+                str = DataInteraction.sexsearch(datareader, choice).toString();
                 ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                 for(int i = 0; i < list.size(); i++){
                     System.out.println(list.get(i).toString());
@@ -177,7 +177,7 @@ public class Simulator extends Application {
                         temporary.clear();
                         System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
-                        temporary.addAll(DataSearch.datesearch(array, date2));
+                        temporary.addAll(DataInteraction.datesearch(array, date2));
                         array = temporary.toArray(new DataReader[j/6]);
                         j = j/6;
                      }
@@ -185,7 +185,7 @@ public class Simulator extends Application {
                         temporary.clear();
                         System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                         name = key.readLine();
-                        temporary.addAll(DataSearch.provincesearch(array, name));
+                        temporary.addAll(DataInteraction.provincesearch(array, name));
                         array = temporary.toArray(new DataReader[j/10]);  
                         j = j/10;
                      } 
@@ -193,14 +193,14 @@ public class Simulator extends Application {
                         temporary.clear();
                         System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
-                        temporary.addAll(DataSearch.laboursearch(array, labourtype));
+                        temporary.addAll(DataInteraction.laboursearch(array, labourtype));
                         array = temporary.toArray(new DataReader[j/4]);
                         j = j/4;
                      } if (choice.equals("4")) {
                         temporary.clear();
                         System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
-                        temporary.addAll(DataSearch.sexsearch(array, sex2));
+                        temporary.addAll(DataInteraction.sexsearch(array, sex2));
                         array = temporary.toArray(new DataReader[j/2]);
                         j = j/2;
                     } 
@@ -231,7 +231,7 @@ public class Simulator extends Application {
                 labourtype = key.readLine(); 
                 System.out.print("Enter sex: ");
                 sex2 = key.readLine();
-                DataSearch.IndRecordSearch(datareader, date2, name, labourtype, sex2);
+                DataInteraction.IndRecordSearch(datareader, date2, name, labourtype, sex2);
                 endmenu = false;  
 
             } else if (strChoice.equals("7")){
@@ -239,28 +239,28 @@ public class Simulator extends Application {
                 System.out.println("Total number of records: " + datareader.length);
                 System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
                 System.out.println("\n----------- 2019 Summary -----------");
-                System.out.println("Average Employment in 2019(Total): " + DataSort.AverageLabour(datareader, "Employment", "2019"));
-                System.out.println("Average Employment in 2019(Males): " + DataSort.AverageLabourSex(datareader, "Employment", "2019", "Males"));
-                System.out.println("Average Employment in 2019(Females): " + DataSort.AverageLabourSex(datareader, "Employment", "2019", "Females"));
-                System.out.println("Average Unemployment in 2019(Total): " + DataSort.AverageLabour(datareader, "Unemployment", "2019"));
-                System.out.println("Average Unemployment in 2019(Males): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2019", "Males"));
-                System.out.println("Average Unemployment in 2019(Females): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2019", "Females"));
-                System.out.println("Highest Employment Rate in 2019: " + DataSort.largest(datareader, "Employment", "2019"));
-                System.out.println("Lowest Employment Rate in 2019: "+ DataSort.smallest(datareader, "Employment", "2019"));
-                System.out.println("Highest Unemployment Rate in 2019: " + DataSort.largest(datareader, "Unemployment", "2019"));
-                System.out.println("Lowest Unemployment Rate in 2019: " + DataSort.smallest(datareader, "Unemployment", "2019"));
+                System.out.println("Average Employment in 2019(Total): " + DataInteraction.AverageLabour(datareader, "Employment", "2019"));
+                System.out.println("Average Employment in 2019(Males): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2019", "Males"));
+                System.out.println("Average Employment in 2019(Females): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2019", "Females"));
+                System.out.println("Average Unemployment in 2019(Total): " + DataInteraction.AverageLabour(datareader, "Unemployment", "2019"));
+                System.out.println("Average Unemployment in 2019(Males): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2019", "Males"));
+                System.out.println("Average Unemployment in 2019(Females): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2019", "Females"));
+                System.out.println("Highest Employment Rate in 2019: " + DataInteraction.largest(datareader, "Employment", "2019"));
+                System.out.println("Lowest Employment Rate in 2019: "+ DataInteraction.smallest(datareader, "Employment", "2019"));
+                System.out.println("Highest Unemployment Rate in 2019: " + DataInteraction.largest(datareader, "Unemployment", "2019"));
+                System.out.println("Lowest Unemployment Rate in 2019: " + DataInteraction.smallest(datareader, "Unemployment", "2019"));
                 
                 System.out.println("\n----------- 2020 Summary -----------");
-                System.out.println("Average Employment in 2020(Total): " + DataSort.AverageLabour(datareader, "Employment", "2020"));
-                System.out.println("Average Employment in 2020(Males): " + DataSort.AverageLabourSex(datareader, "Employment", "2020", "Males"));
-                System.out.println("Average Employment in 2020(Females): " + DataSort.AverageLabourSex(datareader, "Employment", "2020", "Females"));
-                System.out.println("Average Unemployment in 2020(Total): " + DataSort.AverageLabour(datareader, "Unemployment", "2020"));
-                System.out.println("Average Unemployment in 2020(Males): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2020", "Males"));
-                System.out.println("Average Unemployment in 2020(Females): " + DataSort.AverageLabourSex(datareader, "Unemployment", "2020", "Females"));
-                System.out.println("Highest Employment Rate in 2020: " + DataSort.largest(datareader, "Employment", "2020"));
-                System.out.println("Lowest Employment Rate in 2020: "+ DataSort.smallest(datareader, "Employment", "2020"));
-                System.out.println("Highest Unemployment Rate in 2020: " + DataSort.largest(datareader, "Unemployment", "2020"));
-                System.out.println("Lowest Unemployment Rate in 2020: " + DataSort.smallest(datareader, "Unemployment", "2020"));
+                System.out.println("Average Employment in 2020(Total): " + DataInteraction.AverageLabour(datareader, "Employment", "2020"));
+                System.out.println("Average Employment in 2020(Males): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2020", "Males"));
+                System.out.println("Average Employment in 2020(Females): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2020", "Females"));
+                System.out.println("Average Unemployment in 2020(Total): " + DataInteraction.AverageLabour(datareader, "Unemployment", "2020"));
+                System.out.println("Average Unemployment in 2020(Males): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2020", "Males"));
+                System.out.println("Average Unemployment in 2020(Females): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2020", "Females"));
+                System.out.println("Highest Employment Rate in 2020: " + DataInteraction.largest(datareader, "Employment", "2020"));
+                System.out.println("Lowest Employment Rate in 2020: "+ DataInteraction.smallest(datareader, "Employment", "2020"));
+                System.out.println("Highest Unemployment Rate in 2020: " + DataInteraction.largest(datareader, "Unemployment", "2020"));
+                System.out.println("Lowest Unemployment Rate in 2020: " + DataInteraction.smallest(datareader, "Unemployment", "2020"));
                 endmenu = false;
                 
             } else if (strChoice.equals("8")){
@@ -275,18 +275,18 @@ public class Simulator extends Application {
                 }
                 if (choice.equals("3")) {
                     chart = 3;
-                    EM1901 = DataSort.AverageByDate(datareader, "Employment", "2019-01");   
-                    EM1905 = DataSort.AverageByDate(datareader, "Employment", "2019-05"); 
-                    EM1909 = DataSort.AverageByDate(datareader, "Employment", "2019-09"); 
-                    UN1901 = DataSort.AverageByDate(datareader, "Unemployment", "2019-01");   
-                    UN1905 = DataSort.AverageByDate(datareader, "Unemployment", "2019-05"); 
-                    UN1909 = DataSort.AverageByDate(datareader, "Unemployment", "2019-09"); 
-                    EM2001 = DataSort.AverageByDate(datareader, "Employment", "2020-01");   
-                    EM2005 = DataSort.AverageByDate(datareader, "Employment", "2020-05"); 
-                    EM2009 = DataSort.AverageByDate(datareader, "Employment", "2020-09"); 
-                    UN2001 = DataSort.AverageByDate(datareader, "Unemployment", "2020-01");   
-                    UN2005 = DataSort.AverageByDate(datareader, "Unemployment", "2020-05"); 
-                    UN2009 = DataSort.AverageByDate(datareader, "Unemployment", "2020-09"); 
+                    EM1901 = DataInteraction.AverageByDate(datareader, "Employment", "2019-01");   
+                    EM1905 = DataInteraction.AverageByDate(datareader, "Employment", "2019-05"); 
+                    EM1909 = DataInteraction.AverageByDate(datareader, "Employment", "2019-09"); 
+                    UN1901 = DataInteraction.AverageByDate(datareader, "Unemployment", "2019-01");   
+                    UN1905 = DataInteraction.AverageByDate(datareader, "Unemployment", "2019-05"); 
+                    UN1909 = DataInteraction.AverageByDate(datareader, "Unemployment", "2019-09"); 
+                    EM2001 = DataInteraction.AverageByDate(datareader, "Employment", "2020-01");   
+                    EM2005 = DataInteraction.AverageByDate(datareader, "Employment", "2020-05"); 
+                    EM2009 = DataInteraction.AverageByDate(datareader, "Employment", "2020-09"); 
+                    UN2001 = DataInteraction.AverageByDate(datareader, "Unemployment", "2020-01");   
+                    UN2005 = DataInteraction.AverageByDate(datareader, "Unemployment", "2020-05"); 
+                    UN2009 = DataInteraction.AverageByDate(datareader, "Unemployment", "2020-09"); 
 
                     launch(args);
                 }
