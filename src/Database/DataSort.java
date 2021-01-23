@@ -122,7 +122,46 @@ public class DataSort {
         }
         return currentmin;  
     }
-               
+    
+     
+    public static double AverageLabourProv(DataReader[] array, String province, String labourtype, String date){
+        String prov; 
+        String element; 
+        String dateelement; 
+        int n = 0;
+        double sum = 0;
+        
+        for(int i = 0; i < array.length; i++){
+            prov = array[i].getprovince();
+            element = array[i].getlabour();	
+            dateelement = array[i].getdate();
+            
+            if(prov.equals(province) && element.equals(labourtype) && dateelement.equals(date)){ 
+                n++; 
+                sum += array[i].getpopulation();          
+            }
+        }
+        return Math.round((sum / n) * 100.0) / 100.0;      
+    }
+
+    public static double AverageByDate(DataReader[] array, String labourtype, String date){
+        String element; 
+        String dateelement; 
+       
+        double sum = 0; 
+        int n = 0;
+        for(int i = 0; i < array.length; i++){
+            element = array[i].getlabour();	
+            dateelement = array[i].getdate();
+            if(element.equals(labourtype) && dateelement.equals(date)){
+                n++;
+                sum += array[i].getpopulation();
+            }
+        }
+        return Math.round((sum / n) * 100.0) / 100.0;    
+    
+    }
+                
 
 }
 

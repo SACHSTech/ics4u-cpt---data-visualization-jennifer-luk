@@ -3,10 +3,34 @@ package Database;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import javafx.application.Application;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-public class Simulator {
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.stage.Stage;
+
+public class Simulator extends Application {
+    static double EM1901;   
+    static double EM1905; 
+    static double EM1909; 
+    static double UN1901;   
+    static double UN1905; 
+    static double UN1909; 
+    static double EM2001;   
+    static double EM2005;
+    static double EM2009; 
+    static double UN2001;   
+    static double UN2005; 
+    static double UN2009; 
+    static int chart; 
 
     // method to pause console
     private static void pause(int pauseLength) {
@@ -30,10 +54,11 @@ public class Simulator {
         String sex;
         String sex2 = "";
         String str;
-        Double population; 
+        double population; 
         String line = "";
         String name = "";
         String choice; 
+       
         DataReader data; 
         int count = 0; 
         DataReader[] datareader = new DataReader[480];
@@ -78,6 +103,7 @@ public class Simulator {
             System.out.print("Input Choice: ");
             String strChoice = key.readLine();
             clearScreen();
+            
             if (strChoice.equals("1")){
                 System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
                 System.out.print("Input Province (case sensitive): ");
@@ -88,6 +114,7 @@ public class Simulator {
                     System.out.println(list.get(i).toString());
                 }
                 endmenu = false; 
+
             } else if (strChoice.equals("2")){
                 System.out.println("Enter the Labour Type\n- Employment\n- Unemployment");
                 System.out.print("Input Labour Type (case sensitive): ");
@@ -206,6 +233,7 @@ public class Simulator {
                 sex2 = key.readLine();
                 DataSearch.IndRecordSearch(datareader, date2, name, labourtype, sex2);
                 endmenu = false;  
+
             } else if (strChoice.equals("7")){
                 System.out.println("------------------- Summary Report -------------------");
                 System.out.println("Total number of records: " + datareader.length);
@@ -234,15 +262,33 @@ public class Simulator {
                 System.out.println("Highest Unemployment Rate in 2020: " + DataSort.largest(datareader, "Unemployment", "2020"));
                 System.out.println("Lowest Unemployment Rate in 2020: " + DataSort.smallest(datareader, "Unemployment", "2020"));
                 endmenu = false;
+                
             } else if (strChoice.equals("8")){
-                System.out.println("(1)For line chart \n(2) For table view");
+                System.out.println("(1)For line chart \n(2) For table view\n(3) For bar graph");
                 choice  = key.readLine();
                 if (choice.equals("1")) {
-                    Application.launch(args);
+                    chart = 1; 
                 }
     
                 if (choice.equals("2")) {
-    
+                    chart = 2;
+                }
+                if (choice.equals("3")) {
+                    chart = 3;
+                    EM1901 = DataSort.AverageByDate(datareader, "Employment", "2019-01");   
+                    EM1905 = DataSort.AverageByDate(datareader, "Employment", "2019-05"); 
+                    EM1909 = DataSort.AverageByDate(datareader, "Employment", "2019-09"); 
+                    UN1901 = DataSort.AverageByDate(datareader, "Unemployment", "2019-01");   
+                    UN1905 = DataSort.AverageByDate(datareader, "Unemployment", "2019-05"); 
+                    UN1909 = DataSort.AverageByDate(datareader, "Unemployment", "2019-09"); 
+                    EM2001 = DataSort.AverageByDate(datareader, "Employment", "2020-01");   
+                    EM2005 = DataSort.AverageByDate(datareader, "Employment", "2020-05"); 
+                    EM2009 = DataSort.AverageByDate(datareader, "Employment", "2020-09"); 
+                    UN2001 = DataSort.AverageByDate(datareader, "Unemployment", "2020-01");   
+                    UN2005 = DataSort.AverageByDate(datareader, "Unemployment", "2020-05"); 
+                    UN2009 = DataSort.AverageByDate(datareader, "Unemployment", "2020-09"); 
+
+                    launch(args);
                 }
             } else {
                 System.out.println("Invalid Input. Please try again.");
@@ -252,6 +298,19 @@ public class Simulator {
         }
         
     }
+    
+    public void start(Stage primaryStage) throws Exception {
+        if (chart == 1) {
+            
+        } else if (chart == 2) {
+            
+        } else if (chart == 3){
+            primaryStage.setScene(new Scene(Charts.theBarChart(EM1901, EM1905, EM1909, UN1901, UN1905, UN1909, EM2001, EM2005, EM2009, UN2001, UN2005, UN2009)));
+        }
+        primaryStage.show();
+    }
+
+
 
 }
 
