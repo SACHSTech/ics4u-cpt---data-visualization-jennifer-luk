@@ -105,10 +105,11 @@ public class Simulator extends Application {
             clearScreen();
             
             if (strChoice.equals("1")){
-                System.out.println("Enter the Name of Province\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
+                System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                 System.out.print("Input Province (case sensitive): ");
                 choice = key.readLine();
                 str = DataInteraction.provincesearch(datareader, choice).toString();
+                System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                 ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                 for(int i = 0; i < list.size(); i++){
                     System.out.println(list.get(i).toString());
@@ -225,7 +226,7 @@ public class Simulator extends Application {
                 System.out.println("To view an individual record, enter all the following data");
                 System.out.print("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                 date2 = key.readLine();
-                System.out.print("Enter province name (Case sensitive): ");
+                System.out.print("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                 name = key.readLine();
                 System.out.print("Enter labour type (Case sensitive, ex. Employment, Part-time employment, Full-time employment, Unemployment)");
                 labourtype = key.readLine(); 

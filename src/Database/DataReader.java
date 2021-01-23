@@ -36,6 +36,6 @@ public class DataReader {
 
     public String toString() {
         
-        return date + "      " + (province + "                               |").substring(0,27) + (labour + "                               ").substring(0,21) + (sex + "                               ").substring(0,8) + population;
+        return date + "      " + (province + "                               ").substring(0,27) + (labour + "                                   ").substring(0,24) + (sex + "                                   ").substring(0,12) + population;
       }
 }
