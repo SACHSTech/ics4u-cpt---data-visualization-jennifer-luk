@@ -11,27 +11,28 @@
 
 // public class Charts extends Application{
 
-//     public Parent createContent(DataReader[] array){
-//     final ObservableList<Person> data = FXCollections.observableArrayList(
-//             new Person("Jacob", "Smith", "jacob.smith@example.com"),
-//             new Person("Sue", "Jones", "sue@example.com"),
-//             new Person("Ethan", "Fox", "ethan.fox@example.com"),
-//             new Person("Emma", "Jones", "emma.jones@example.com"),
-//             new Person("Mike", "Brown", "mike.brown@example.com"));
-
-//     TableColumn firstNameCol = new TableColumn();
-//     firstNameCol.setText("Date");
-//     firstNameCol.setCellValueFactory(new PropertyValueFactory("firstName"));
-//     TableColumn lastNameCol = new TableColumn();
-//     lastNameCol.setText("Last");
-//     lastNameCol.setCellValueFactory(new PropertyValueFactory("lastName"));
-//     TableColumn emailCol = new TableColumn();
-//     emailCol.setText("Email");
-//     emailCol.setMinWidth(200);
-//     emailCol.setCellValueFactory(new PropertyValueFactory("email"));
+//     public Parent createTable(){
+//     final ObservableList<DataReader> data = FXCollections.observableArrayList(
+    
+//     TableColumn DateCol = new TableColumn();
+//     DateCol.setText("Date");
+//     DateCol.setCellValueFactory(new PropertyValueFactory("firstName"));
+//     TableColumn ProvinceCol = new TableColumn();
+//     ProvinceCol.setText("Province");
+//     ProvinceCol.setCellValueFactory(new PropertyValueFactory("lastName"));
+//     TableColumn LabCol = new TableColumn();
+//     LabCol.setText("Labour Type");
+//     LabCol.setMinWidth(200);
+//     LabCol.setCellValueFactory(new PropertyValueFactory("Population x1000"));
 //     final TableView tableView = new TableView();
 //     tableView.setItems(data);
-//     tableView.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+//     tableView.getColumns().addAll(DateCol, ProvinceCol, LabCol);
 //     return tableView;
+// }
+
+// @Override
+// public void start(Stage arg0) throws Exception {
+//     // TODO Auto-generated method stub
+
 // }
 // }

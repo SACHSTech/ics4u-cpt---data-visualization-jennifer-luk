@@ -139,40 +139,58 @@ public class Simulator {
             } else if (strChoice.equals("5")){
                 boolean endmenu2 = true; 
                 str ="";
+                DataReader[] array = datareader; 
                 ArrayList<DataReader> temporary = new ArrayList<DataReader>();
+                int j = 480;
                 while (endmenu2) {
-                    
-                    System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Stop Filtering");
+
+                    System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Stop Filtering\n");
                     choice= key.readLine();
                     if(choice.equals("1")){
+                        temporary.clear();
                         System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
-                        temporary.addAll(DataSearch.datesearch(datareader, date2));
-
-
-                    } else if (choice.equals("2")){
-                        System.out.println("Enter province name (Case sensitive):\n- Ontario\n- Newfoundland and Labrador\n- Alberta\n- Manitoba\n- Prince Edward Island\n- Nova Scotia\n- British Columbia\n- Saskatchewan\n- Quebec");
+                        temporary.addAll(DataSearch.datesearch(array, date2));
+                        array = temporary.toArray(new DataReader[j/6]);
+                        j = j/6;
+                     }
+                    if (choice.equals("2")){
+                        temporary.clear();
+                        System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                         name = key.readLine();
-                        temporary.addAll(DataSearch.provincesearch(datareader, date2));
-                                 
-                    } else if (choice.equals("3")) {
+                        temporary.addAll(DataSearch.provincesearch(array, name));
+                        array = temporary.toArray(new DataReader[j/10]);  
+                        j = j/10;
+                     } 
+                    if (choice.equals("3")) {
+                        temporary.clear();
                         System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
-                        temporary.addAll(DataSearch.laboursearch(datareader, date2));
- 
-                    } else if (choice.equals("4")) {
+                        temporary.addAll(DataSearch.laboursearch(array, labourtype));
+                        array = temporary.toArray(new DataReader[j/4]);
+                        j = j/4;
+                     } if (choice.equals("4")) {
+                        temporary.clear();
                         System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
-                        temporary.addAll(DataSearch.sexsearch(datareader, date2));
-                         
-                    } else if (choice.equals("5")) {
+                        temporary.addAll(DataSearch.sexsearch(array, sex2));
+                        array = temporary.toArray(new DataReader[j/2]);
+                        j = j/2;
+                    } 
+                    if (choice.equals("5")) {
                         System.out.println("Processing filters...");
                         pause(500);
-                     
-                        System.out.println(temporary);
+                        System.out.println("------------------- Filtered Data -------------------");
+                        str = Arrays.toString(temporary.toArray()).replace("[", " ").replace("]", "");
 
+                        ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
+                        for(int i = 0; i < list.size(); i++){
+                            System.out.println(list.get(i).toString());
+                        }
+                       
                         endmenu2 = false; 
                     }
+                    clearScreen();
                 }
                   
 
