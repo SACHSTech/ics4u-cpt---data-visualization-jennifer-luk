@@ -4,17 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javafx.application.Application;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
 import javafx.stage.Stage;
 
 public class Simulator extends Application {
@@ -273,6 +264,7 @@ public class Simulator extends Application {
     
                 if (choice.equals("2")) {
                     chart = 2;
+                     launch(args);
                 }
                 if (choice.equals("3")) {
                     chart = 3;
@@ -301,14 +293,48 @@ public class Simulator extends Application {
     }
     
     public void start(Stage primaryStage) throws Exception {
+        String date;
+        String province;
+        String labour;
+        String sex;
+        String population; 
+        String line = "";
+
+       
+        TableData data; 
+        int count = 0; 
+        TableData[] table = new TableData[480];
+ 
+        BufferedReader file = new BufferedReader(new FileReader("src/Database/DataSet.csv"));      
+
+        while(count < 480){
+            line = file.readLine();
+            String[] element = line.split(",");
+
+            date = element[0];
+            province = element[1];
+            labour = element[2];
+            sex = element[3];
+            population =  element[4];
+            
+            data = new TableData(date, province, labour, sex, population);
+            
+            table[count] = data;
+
+            count++; 
+        }
+        file.close();
+        
         if (chart == 1) {
             
         } else if (chart == 2) {
-            
+            primaryStage.setScene(new Scene(Charts.theTable()));
         } else if (chart == 3){
             primaryStage.setScene(new Scene(Charts.theBarChart(EM1901, EM1905, EM1909, UN1901, UN1905, UN1909, EM2001, EM2005, EM2009, UN2001, UN2005, UN2009)));
+            
         }
         primaryStage.show();
+       
     }
 
 

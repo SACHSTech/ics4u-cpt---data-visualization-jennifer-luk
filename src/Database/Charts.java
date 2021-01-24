@@ -1,5 +1,6 @@
 package Database;
 
+import java.io.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,6 +10,10 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.stage.Stage;
+
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 
 public class Charts extends Application {
@@ -47,5 +52,70 @@ public class Charts extends Application {
         return chart;
 
     }
+    public static Parent theTable() throws IOException{
+        String date;
+            String province;
+            String labour;
+            String sex;
+            String population; 
+            String line = "";
 
+        
+            TableData data; 
+            int count = 0; 
+            TableData[] table = new TableData[480];
+    
+            BufferedReader file = new BufferedReader(new FileReader("src/Database/DataSet.csv"));      
+
+            while(count < 480){
+                try {
+					line = file.readLine();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+                String[] element = line.split(",");
+
+                date = element[0];
+                province = element[1];
+                labour = element[2];
+                sex = element[3];
+                population =  element[4];
+                
+                data = new TableData(date, province, labour, sex, population);
+                
+                table[count] = data;
+
+                count++; 
+            }
+            file.close();
+    
+        final ObservableList<TableData> tableview = FXCollections.observableArrayList(table);
+        
+        TableColumn datecol = new TableColumn();
+        datecol.setText("Date");
+        datecol.setCellValueFactory(new PropertyValueFactory("thedate"));
+
+        TableColumn provincecol = new TableColumn();
+        provincecol.setText("Province");
+        provincecol.setCellValueFactory(new PropertyValueFactory("theprovince"));
+
+        TableColumn labourcol = new TableColumn();
+        labourcol.setText("Labour Type");
+        labourcol.setCellValueFactory(new PropertyValueFactory("thelabour"));
+
+        TableColumn sexcol = new TableColumn();
+        sexcol.setText("Sex");
+        sexcol.setCellValueFactory(new PropertyValueFactory("thesex"));
+
+        TableColumn populationcol = new TableColumn();
+        populationcol.setText("Population x1,000");
+        populationcol.setCellValueFactory(new PropertyValueFactory("thepopulation"));
+        
+        final TableView tableView = new TableView();
+        tableView.setItems(tableview);
+        tableView.getColumns().addAll(datecol, provincecol, labourcol, sexcol, populationcol);
+        return tableView;
+    }
+    
 }

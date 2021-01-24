@@ -5,14 +5,14 @@ public class DataReader {
     private String province; 
     private String labour; 
     private String sex; 
-    private Double population;
+    private double population;
 
-    public DataReader (String date, String province, String labour, String sex, Double population){
+    public DataReader (String date, String province, String labour, String sex, double pop){
         this.date = date; 
         this.province = province; 
         this.labour = labour; 
         this.sex = sex;
-        this.population = population; 
+        this.population = pop; 
     }
     public String getdate() {
         return date;
