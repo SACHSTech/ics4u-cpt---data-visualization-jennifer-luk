@@ -119,8 +119,18 @@ public class Simulator extends Application {
                 for(int i = 0; i < list.size(); i++){
                     System.out.println(list.get(i).toString());
                 }
-                endmenu = false; 
-
+                
+                System.out.println("\n(M) Main Menu\n(X) Exit Database");
+                choice = key.readLine();
+                if (choice.equals("M")){
+                    endmenu = true; 
+                    System.out.println("Returning to Main Menu...");
+                    pause(500);
+                    clearScreen();
+                } else if (choice.equals("X")){
+                    endmenu = false;
+                }
+                
             } else if (strChoice.equals("2")){
                 System.out.println("Enter the Labour Type\n- Employment\n- Unemployment");
                 System.out.print("Input Labour Type (case sensitive): ");
@@ -141,7 +151,17 @@ public class Simulator extends Application {
                         System.out.println(list.get(i).toString());
                     }
                 }
-                endmenu = false;
+
+                System.out.println("\n(M) Main Menu\n(X) Exit Database");
+                choice = key.readLine();
+                if (choice.equals("M")){
+                    endmenu = true; 
+                    System.out.println("Returning to Main Menu...");
+                    pause(500);
+                    clearScreen();
+                } else if (choice.equals("X")){
+                    endmenu = false;
+                }
                 
             } else if (strChoice.equals("3")){
                 System.out.print("(1) Sort by lowest to highest\n(2) Sort by highest to lowest");
@@ -157,7 +177,17 @@ public class Simulator extends Application {
                         System.out.println(datareader[i]);
                    }
                 }
-                endmenu = false;
+                
+                System.out.println("\n(M) Main Menu\n(X) Exit Database");
+                choice = key.readLine();
+                if (choice.equals("M")){
+                    endmenu = true; 
+                    System.out.println("Returning to Main Menu...");
+                    pause(500);
+                    clearScreen();
+                } else if (choice.equals("X")){
+                    endmenu = false;
+                }
                
             } else if (strChoice.equals("4")){
                 System.out.print("Enter sex (Males, Females): ");
@@ -167,7 +197,17 @@ public class Simulator extends Application {
                 for(int i = 0; i < list.size(); i++){
                     System.out.println(list.get(i).toString());
                 }
-                endmenu = false;
+
+                System.out.println("\n(M) Main Menu\n(X) Exit Database");
+                choice = key.readLine();
+                if (choice.equals("M")){
+                    endmenu = true; 
+                    System.out.println("Returning to Main Menu...");
+                    pause(500);
+                    clearScreen();
+                } else if (choice.equals("X")){
+                    endmenu = false;
+                }
 
             } else if (strChoice.equals("5")){
                 boolean endmenu2 = true; 
@@ -225,7 +265,17 @@ public class Simulator extends Application {
                     }
                     clearScreen();
                 }
-                  
+
+                System.out.println("\n(M) Main Menu\n(X) Exit Database");
+                choice = key.readLine();
+                if (choice.equals("M")){
+                    endmenu = true; 
+                    System.out.println("Returning to Main Menu...");
+                    pause(500);
+                    clearScreen();
+                } else if (choice.equals("X")){
+                    endmenu = false;
+                }
 
             } else if (strChoice.equals("6")){
                 System.out.println("To view an individual record, enter all the following data");
@@ -238,7 +288,17 @@ public class Simulator extends Application {
                 System.out.print("Enter sex: ");
                 sex2 = key.readLine();
                 DataInteraction.IndRecordSearch(datareader, date2, name, labourtype, sex2);
-                endmenu = false;  
+                
+                System.out.println("\n(M) Main Menu\n(X) Exit Database");
+                choice = key.readLine();
+                if (choice.equals("M")){
+                    endmenu = true; 
+                    System.out.println("Returning to Main Menu...");
+                    pause(500);
+                    clearScreen();
+                } else if (choice.equals("X")){
+                    endmenu = false;
+                } 
 
             } else if (strChoice.equals("7")){
                 System.out.println("------------------- Summary Report -------------------");
@@ -280,7 +340,7 @@ public class Simulator extends Application {
                 }
                 
             } else if (strChoice.equals("8")){
-                System.out.println("(1)For line chart \n(2) For table view\n(3) For bar graph");
+                System.out.println("(1)For line chart\n(2) For table view\n(3) For bar graph");
                 choice  = key.readLine();
                 if (choice.equals("1")) {
                     chart = 1; 
