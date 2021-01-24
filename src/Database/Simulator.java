@@ -20,7 +20,21 @@ public class Simulator extends Application {
     static double EM2009; 
     static double UN2001;   
     static double UN2005; 
-    static double UN2009; 
+    static double UN2009;
+    
+    // variables for males employment vs unemployment chart
+    static double EMM1901;   
+    static double EMM1905; 
+    static double EMM1909; 
+    static double UNM1901;   
+    static double UNM1905; 
+    static double UNM1909;
+    static double EMM2001;   
+    static double EMM2005; 
+    static double EMM2009;
+    static double UNM2001;   
+    static double UNM2005; 
+    static double UNM2009;
     static int chart; 
 
     // method to pause console
@@ -253,18 +267,56 @@ public class Simulator extends Application {
                 System.out.println("Lowest Employment Rate in 2020: "+ DataInteraction.smallest(datareader, "Employment", "2020"));
                 System.out.println("Highest Unemployment Rate in 2020: " + DataInteraction.largest(datareader, "Unemployment", "2020"));
                 System.out.println("Lowest Unemployment Rate in 2020: " + DataInteraction.smallest(datareader, "Unemployment", "2020"));
-                endmenu = false;
+                
+                System.out.println("\n(M) Main Menu\n(X) Exit Database");
+                choice = key.readLine();
+                if (choice.equals("M")){
+                    endmenu = true; 
+                    System.out.println("Returning to Main Menu...");
+                    pause(500);
+                    clearScreen();
+                } else if (choice.equals("X")){
+                    endmenu = false;
+                }
                 
             } else if (strChoice.equals("8")){
                 System.out.println("(1)For line chart \n(2) For table view\n(3) For bar graph");
                 choice  = key.readLine();
                 if (choice.equals("1")) {
                     chart = 1; 
+                    EMM1901 = DataInteraction.AveragebySex(datareader, "Employment", "2019-01", "Males");   
+                    EMM1905 = DataInteraction.AveragebySex(datareader, "Employment", "2019-05", "Males"); 
+                    EMM1909 = DataInteraction.AveragebySex(datareader, "Employment", "2019-09", "Males");
+                    EMM2001 = DataInteraction.AveragebySex(datareader, "Employment", "2020-01", "Males");   
+                    EMM2005 = DataInteraction.AveragebySex(datareader, "Employment", "2020-05", "Males"); 
+                    EMM2009 = DataInteraction.AveragebySex(datareader, "Employment", "2020-09", "Males"); 
+
+                    EM1901 = DataInteraction.AveragebySex(datareader, "Employment", "2019-01", "Females");   
+                    EM1905 = DataInteraction.AveragebySex(datareader, "Employment", "2019-05", "Females"); 
+                    EM1909 = DataInteraction.AveragebySex(datareader, "Employment", "2019-09", "Females"); 
+                    EM2001 = DataInteraction.AveragebySex(datareader, "Employment", "2020-01", "Females");   
+                    EM2005 = DataInteraction.AveragebySex(datareader, "Employment", "2020-05", "Females"); 
+                    EM2009 = DataInteraction.AveragebySex(datareader, "Employment", "2020-09", "Females"); 
+
+                    UNM1901 = DataInteraction.AveragebySex(datareader, "Unemployment", "2019-01", "Males");   
+                    UNM1905 = DataInteraction.AveragebySex(datareader, "Unemployment", "2019-05", "Males"); 
+                    UNM1909 = DataInteraction.AveragebySex(datareader, "Unemployment", "2019-09", "Males"); 
+                    UNM2001 = DataInteraction.AveragebySex(datareader, "Unemployment", "2020-01", "Males");   
+                    UNM2005 = DataInteraction.AveragebySex(datareader, "Unemployment", "2020-05", "Males"); 
+                    UNM2009 = DataInteraction.AveragebySex(datareader, "Unemployment", "2020-09", "Males");
+                    
+                    UN1901 = DataInteraction.AveragebySex(datareader, "Unemployment", "2019-01", "Females");   
+                    UN1905 = DataInteraction.AveragebySex(datareader, "Unemployment", "2019-05", "Females"); 
+                    UN1909 = DataInteraction.AveragebySex(datareader, "Unemployment", "2019-09", "Females"); 
+                    UN2001 = DataInteraction.AveragebySex(datareader, "Unemployment", "2020-01", "Females");   
+                    UN2005 = DataInteraction.AveragebySex(datareader, "Unemployment", "2020-05", "Females"); 
+                    UN2009 = DataInteraction.AveragebySex(datareader, "Unemployment", "2020-09", "Females");
+                    launch(args);
                 }
     
                 if (choice.equals("2")) {
                     chart = 2;
-                     launch(args);
+                    launch(args);
                 }
                 if (choice.equals("3")) {
                     chart = 3;
@@ -280,7 +332,7 @@ public class Simulator extends Application {
                     UN2001 = DataInteraction.AverageByDate(datareader, "Unemployment", "2020-01");   
                     UN2005 = DataInteraction.AverageByDate(datareader, "Unemployment", "2020-05"); 
                     UN2009 = DataInteraction.AverageByDate(datareader, "Unemployment", "2020-09"); 
-
+                    
                     launch(args);
                 }
             } else {
@@ -293,40 +345,10 @@ public class Simulator extends Application {
     }
     
     public void start(Stage primaryStage) throws Exception {
-        String date;
-        String province;
-        String labour;
-        String sex;
-        String population; 
-        String line = "";
-
-       
-        TableData data; 
-        int count = 0; 
-        TableData[] table = new TableData[480];
- 
-        BufferedReader file = new BufferedReader(new FileReader("src/Database/DataSet.csv"));      
-
-        while(count < 480){
-            line = file.readLine();
-            String[] element = line.split(",");
-
-            date = element[0];
-            province = element[1];
-            labour = element[2];
-            sex = element[3];
-            population =  element[4];
-            
-            data = new TableData(date, province, labour, sex, population);
-            
-            table[count] = data;
-
-            count++; 
-        }
-        file.close();
-        
+                
         if (chart == 1) {
-            
+            primaryStage.setScene(new Scene(Charts.theLineChart(EMM1901, EMM1905, EMM1909, EMM2001, EMM2005, EMM2009, EM1901, EM1905, EM1909, EM2001, EM2005, EM2009, 
+            UNM1901, UNM1905, UNM1909, UNM2001, UNM2005, UNM2009, UN1901, UN1905, UN1909, UN2001, UN2005, UN2009)));
         } else if (chart == 2) {
             primaryStage.setScene(new Scene(Charts.theTable()));
         } else if (chart == 3){

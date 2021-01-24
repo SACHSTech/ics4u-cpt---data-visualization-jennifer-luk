@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class DataInteraction {
 
-  public static ArrayList<DataReader> provincesearch(DataReader[] array, String choice){
-    String element;
+  public static ArrayList<DataReader> provincesearch(DataReader[] array, String province){
+    String provinceelement;
     ArrayList<DataReader> temporary = new ArrayList<DataReader>(); 
 
       for(int i = 0; i < array.length; i++){
-        element = array[i].getprovince();				
-        if(element.equals(choice)){
+        provinceelement = array[i].getprovince();				
+        if(provinceelement.equals(province)){
             temporary.add(array[i]);
          }
       }
@@ -18,27 +18,27 @@ public class DataInteraction {
       return temporary; 
   }
 
-  public static ArrayList<DataReader> laboursearch(DataReader[] array, String choice){
-    String element;
+  public static ArrayList<DataReader> laboursearch(DataReader[] array, String labour){
+    String labourelement;
     ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
     for(int i = 0; i < array.length; i++){
-      element = array[i].getlabour();				
-      if(element.equals(choice)){
-          temporary.add(array[i]);
-       }
+        labourelement = array[i].getlabour();				
+        if(labourelement.equals(labour)){
+            temporary.add(array[i]);
+        }
     }
    
     return temporary; 
    }
 
-  public static ArrayList<DataReader> datesearch(DataReader[] array, String choice){
-    String element;
+  public static ArrayList<DataReader> datesearch(DataReader[] array, String date){
+    String dateelement;
     ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
     for(int i = 0; i < array.length; i++){
-      element = array[i].getdate();				
-      if(element.equals(choice)){
+        dateelement = array[i].getdate();				
+      if(dateelement.equals(date)){
           temporary.add(array[i]);
        }
     }
@@ -46,13 +46,13 @@ public class DataInteraction {
     return temporary; 
 
   }
-  public static ArrayList<DataReader> sexsearch(DataReader[] array, String choice){
-    String element;
+  public static ArrayList<DataReader> sexsearch(DataReader[] array, String sex){
+    String sexelement;
     ArrayList<DataReader> temporary = new ArrayList<DataReader>();
 
     for(int i = 0; i < array.length; i++){
-      element = array[i].getsex();				
-      if(element.equals(choice)){
+        sexelement = array[i].getsex();				
+      if(sexelement.equals(sex)){
           temporary.add(array[i]);
        }
     }
@@ -126,15 +126,16 @@ public static DataReader[] sortHigh(DataReader[] array){
     return array;
 
 }
-public static double AverageLabour(DataReader[] array, String choice, String date) {
-    String element; 
+
+public static double AverageLabour(DataReader[] array, String labour, String date) {
+    String labourelement; 
     String dateelement; 
     double sum = 0; 
     int n = 0;
     for (int i = 0; i < array.length; i++) {
-        element = array[i].getlabour();	
+        labourelement = array[i].getlabour();	
         dateelement = array[i].getdate().substring(0, 4);
-        if (element.equals(choice) && dateelement.equals(date)) {
+        if (labourelement.equals(labour) && dateelement.equals(date)) {
             n++;
             sum += array[i].getpopulation();
         }                              
@@ -143,17 +144,18 @@ public static double AverageLabour(DataReader[] array, String choice, String dat
     return Math.round((sum / n) * 100.0) / 100.0;    
 
 }
-public static double AverageLabourSex(DataReader[] array, String choice, String date, String sex){
-    String element; 
+
+public static double AverageLabourSex(DataReader[] array, String labour, String date, String sex){
+    String labourelement; 
     String dateelement; 
     String sexelement;
     double sum = 0; 
     int n = 0;
     for(int i = 0; i < array.length; i++){
-        element = array[i].getlabour();	
+        labourelement = array[i].getlabour();	
         dateelement = array[i].getdate().substring(0, 4);
         sexelement = array[i].getsex();
-        if(element.equals(choice) && dateelement.equals(date) && sexelement.equals(sex)){
+        if(labourelement.equals(labour) && dateelement.equals(date) && sexelement.equals(sex)){
             n++;
             sum += array[i].getpopulation();
         }
@@ -161,7 +163,7 @@ public static double AverageLabourSex(DataReader[] array, String choice, String 
     return Math.round((sum / n) * 100.0) / 100.0;    
 
 }
-public static double largest(DataReader[] array, String choice, String date){
+public static double largest(DataReader[] array, String labour, String date){
     String element; 
     String dateelement; 
     double currentmax = 0;
@@ -170,7 +172,7 @@ public static double largest(DataReader[] array, String choice, String date){
         element = array[i].getlabour();	
         dateelement = array[i].getdate().substring(0, 4);
         
-        if(element.equals(choice) && dateelement.equals(date)){ 
+        if(element.equals(labour) && dateelement.equals(date)){ 
             if (array[i].getpopulation() > currentmax) {
                 currentmax = array[i].getpopulation();
             }             
@@ -178,20 +180,23 @@ public static double largest(DataReader[] array, String choice, String date){
     }
         return currentmax;  
 }
-public static double smallest(DataReader[] array, String choice, String date){
-    String element; 
+
+public static double smallest(DataReader[] array, String labour, String date){
+    String labourelement; 
     String dateelement; 
     double currentmin = 0;
 
     for(int i = 0; i < array.length; i++){
-        element = array[i].getlabour();	
+        labourelement = array[i].getlabour();	
         dateelement = array[i].getdate().substring(0, 4);
         
-        if(element.equals(choice) && dateelement.equals(date)){ 
-            if (i == 1){
-                currentmin = array[i].getpopulation();
-            }
-            else if (array[i].getpopulation() < currentmin) {
+        if (i == 1){
+            currentmin = array[i].getpopulation();
+        }
+
+        if(labourelement.equals(labour) && dateelement.equals(date)){ 
+            
+            if (array[i].getpopulation() < currentmin) {
                 currentmin = array[i].getpopulation();
             }             
         }
@@ -230,6 +235,26 @@ public static double AverageByDate(DataReader[] array, String labourtype, String
         element = array[i].getlabour();	
         dateelement = array[i].getdate();
         if(element.equals(labourtype) && dateelement.equals(date)){
+            n++;
+            sum += array[i].getpopulation();
+        }
+    }
+    return Math.round((sum / n) * 100.0) / 100.0;    
+
+}
+
+public static double AveragebySex(DataReader[] array, String choice, String date, String sex){
+    String element; 
+    String dateelement; 
+    String sexelement;
+    double sum = 0; 
+    int n = 0;
+
+    for(int i = 0; i < array.length; i++){
+        element = array[i].getlabour();	
+        dateelement = array[i].getdate();
+        sexelement = array[i].getsex();
+        if(element.equals(choice) && dateelement.equals(date) && sexelement.equals(sex)){
             n++;
             sum += array[i].getpopulation();
         }
