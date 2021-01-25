@@ -83,6 +83,7 @@ public class Charts extends Application {
         return linechart;
     }
 
+    // Creates a table with data 
     public static Parent theTable() throws IOException{
 
         // Initializes variable for table 

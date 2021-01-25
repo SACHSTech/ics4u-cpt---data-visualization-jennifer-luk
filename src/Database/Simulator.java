@@ -362,29 +362,46 @@ public class Simulator extends Application {
                 System.out.println("------------------- Summary Report -------------------");
                 System.out.println("Total number of records: " + datareader.length);
                 System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
+                System.out.println("All data is presented in population x1,1000");
                 System.out.println("\n----------- 2019 Summary -----------");
+
+                // Prints out average employment and unemployments depending on sex
                 System.out.println("Average Employment in 2019(Total): " + DataInteraction.AverageLabour(datareader, "Employment", "2019"));
                 System.out.println("Average Employment in 2019(Males): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2019", "Males"));
                 System.out.println("Average Employment in 2019(Females): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2019", "Females"));
                 System.out.println("Average Unemployment in 2019(Total): " + DataInteraction.AverageLabour(datareader, "Unemployment", "2019"));
                 System.out.println("Average Unemployment in 2019(Males): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2019", "Males"));
                 System.out.println("Average Unemployment in 2019(Females): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2019", "Females"));
+                
+                // Prints out highest and lowest employment and unemployment rates
                 System.out.println("Highest Employment Rate in 2019: " + DataInteraction.largest(datareader, "Employment", "2019"));
                 System.out.println("Lowest Employment Rate in 2019: "+ DataInteraction.smallest(datareader, "Employment", "2019"));
                 System.out.println("Highest Unemployment Rate in 2019: " + DataInteraction.largest(datareader, "Unemployment", "2019"));
                 System.out.println("Lowest Unemployment Rate in 2019: " + DataInteraction.smallest(datareader, "Unemployment", "2019"));
-                
+
+                // Prints out median 
+                System.out.println("Median Employment Rate in 2019" + DataInteraction.findMedian(datareader, "Employment", "2019"));
+                System.out.println("Median Unemployment Rate in 2019" + DataInteraction.findMedian(datareader, "Unemployment", "2019"));
+
                 System.out.println("\n----------- 2020 Summary -----------");
+
+                // Prints out average employment and unemployments depending on sex
                 System.out.println("Average Employment in 2020(Total): " + DataInteraction.AverageLabour(datareader, "Employment", "2020"));
                 System.out.println("Average Employment in 2020(Males): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2020", "Males"));
                 System.out.println("Average Employment in 2020(Females): " + DataInteraction.AverageLabourSex(datareader, "Employment", "2020", "Females"));
                 System.out.println("Average Unemployment in 2020(Total): " + DataInteraction.AverageLabour(datareader, "Unemployment", "2020"));
                 System.out.println("Average Unemployment in 2020(Males): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2020", "Males"));
                 System.out.println("Average Unemployment in 2020(Females): " + DataInteraction.AverageLabourSex(datareader, "Unemployment", "2020", "Females"));
+
+                // Prints out highest and lowest employment and unemployment rates
                 System.out.println("Highest Employment Rate in 2020: " + DataInteraction.largest(datareader, "Employment", "2020"));
                 System.out.println("Lowest Employment Rate in 2020: "+ DataInteraction.smallest(datareader, "Employment", "2020"));
                 System.out.println("Highest Unemployment Rate in 2020: " + DataInteraction.largest(datareader, "Unemployment", "2020"));
                 System.out.println("Lowest Unemployment Rate in 2020: " + DataInteraction.smallest(datareader, "Unemployment", "2020"));
+
+                // Prints out median 
+                System.out.println("Median Employment Rate in 2020" + DataInteraction.findMedian(datareader, "Employment", "2020"));
+                System.out.println("Median Unemployment Rate in 2020" + DataInteraction.findMedian(datareader, "Unemployment", "2020"));
                 
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");

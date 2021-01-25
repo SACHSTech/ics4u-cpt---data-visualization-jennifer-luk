@@ -364,7 +364,7 @@ public class DataInteraction {
     }
 
     /**
-    * Calculates the average of the labour type according to date and month 
+    * Calculates the average of the labour type according to date and month for bar chart
     * @param array - the datareader array 
     * @param labour - the labour type 
     * @param date - the date and month 
@@ -395,7 +395,7 @@ public class DataInteraction {
     }
 
     /**
-    * Calculates the average of the labour type according to date, month, and sex 
+    * Calculates the average of the labour type according to date, month, and sex for line chart
     * @param array - the datareader array 
     * @param labour - the labour type 
     * @param date - the date and month 
@@ -427,4 +427,57 @@ public class DataInteraction {
         // Returns the average to two decimal places
         return Math.round((sum / n) * 100.0) / 100.0;    
     }
+
+    // The methods below calculate the mean, median, and standard deviation 
+
+    /**
+    * Calculates the mean of population amount according to labour type and year 
+    * @param array - the datareader array 
+    * @param labour - the labour type 
+    * @param date - the date and month 
+    * @return the mean 
+    */
+    public static double findMean(DataReader[] array, String labour, String date){
+
+
+
+    }
+    /**
+    * Calculates the median population amount according to labour type and year 
+    * @param array - the datareader array 
+    * @param labour - the labour type 
+    * @param date - the date and month 
+    * @return the median 
+    */
+    public static double findMedian(DataReader[] array, String labour, String date){
+        
+        // Initialize variables 
+        String labourelement; 
+        String dateelement; 
+        DataReader[] sortedarray = new DataReader[60];
+        int n; 
+        int j = 0; 
+        
+        // First we sort the array
+        sortLow(array);
+
+        for(int i = 0; i < array.length; i++){
+            labourelement = array[i].getlabour();	
+            dateelement = array[i].getdate().substring(0, 4);
+
+            if(labourelement.equals(labour) && dateelement.equals(date)){
+                sortedarray[j] = array[i];
+                j++;
+            }
+        }
+
+        n = sortedarray.length; 
+         
+        // check for even case
+        if (n % 2 != 0)
+            return sortedarray[n/2].getpopulation();
+        
+        return ((sortedarray[(n - 1) / 2].getpopulation()) + (sortedarray[n / 2].getpopulation())) / 2.0;
+    }
+ 
 }
