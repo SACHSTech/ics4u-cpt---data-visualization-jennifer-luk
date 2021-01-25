@@ -380,8 +380,8 @@ public class Simulator extends Application {
                 System.out.println("Lowest Unemployment Rate in 2019: " + DataInteraction.smallest(datareader, "Unemployment", "2019"));
 
                 // Prints out median 
-                System.out.println("Median Employment Rate in 2019" + DataInteraction.findMedian(datareader, "Employment", "2019"));
-                System.out.println("Median Unemployment Rate in 2019" + DataInteraction.findMedian(datareader, "Unemployment", "2019"));
+                System.out.println("Median Employment Rate in 2019: " + DataInteraction.findMedian(datareader, "Employment", "2019"));
+                System.out.println("Median Unemployment Rate in 2019: " + DataInteraction.findMedian(datareader, "Unemployment", "2019"));
 
                 System.out.println("\n----------- 2020 Summary -----------");
 
@@ -400,8 +400,8 @@ public class Simulator extends Application {
                 System.out.println("Lowest Unemployment Rate in 2020: " + DataInteraction.smallest(datareader, "Unemployment", "2020"));
 
                 // Prints out median 
-                System.out.println("Median Employment Rate in 2020" + DataInteraction.findMedian(datareader, "Employment", "2020"));
-                System.out.println("Median Unemployment Rate in 2020" + DataInteraction.findMedian(datareader, "Unemployment", "2020"));
+                System.out.println("Median Employment Rate in 2020: " + DataInteraction.findMedian(datareader, "Employment", "2020"));
+                System.out.println("Median Unemployment Rate in 2020: " + DataInteraction.findMedian(datareader, "Unemployment", "2020"));
                 
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");

@@ -428,20 +428,8 @@ public class DataInteraction {
         return Math.round((sum / n) * 100.0) / 100.0;    
     }
 
-    // The methods below calculate the mean, median, and standard deviation 
+    // The methods below calculate the median
 
-    /**
-    * Calculates the mean of population amount according to labour type and year 
-    * @param array - the datareader array 
-    * @param labour - the labour type 
-    * @param date - the date and month 
-    * @return the mean 
-    */
-    public static double findMean(DataReader[] array, String labour, String date){
-
-
-
-    }
     /**
     * Calculates the median population amount according to labour type and year 
     * @param array - the datareader array 
@@ -461,10 +449,12 @@ public class DataInteraction {
         // First we sort the array
         sortLow(array);
 
+        // Go through whole array
         for(int i = 0; i < array.length; i++){
             labourelement = array[i].getlabour();	
             dateelement = array[i].getdate().substring(0, 4);
 
+            // If elements meet the parameters, add to the new array
             if(labourelement.equals(labour) && dateelement.equals(date)){
                 sortedarray[j] = array[i];
                 j++;
@@ -479,5 +469,4 @@ public class DataInteraction {
         
         return ((sortedarray[(n - 1) / 2].getpopulation()) + (sortedarray[n / 2].getpopulation())) / 2.0;
     }
- 
 }
