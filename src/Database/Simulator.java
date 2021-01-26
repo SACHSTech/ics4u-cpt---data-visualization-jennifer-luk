@@ -147,10 +147,10 @@ public class Simulator extends Application {
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
                 if (choice.equals("M")){
-                    endmenu = true; 
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     clearScreen();
+                    endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
                 }
@@ -186,10 +186,10 @@ public class Simulator extends Application {
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
                 if (choice.equals("M")){
-                    endmenu = true; 
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     clearScreen();
+                    endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
                 }
@@ -220,10 +220,10 @@ public class Simulator extends Application {
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
                 if (choice.equals("M")){
-                    endmenu = true; 
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     clearScreen();
+                    endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
                 }
@@ -243,10 +243,10 @@ public class Simulator extends Application {
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
                 if (choice.equals("M")){
-                    endmenu = true; 
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     clearScreen();
+                    endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
                 }
@@ -322,10 +322,10 @@ public class Simulator extends Application {
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
                 if (choice.equals("M")){
-                    endmenu = true; 
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     clearScreen();
+                    endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
                 }
@@ -349,13 +349,13 @@ public class Simulator extends Application {
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
                 if (choice.equals("M")){
-                    endmenu = true; 
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     clearScreen();
+                    endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
-                } 
+                }
 
             // View summary report to compare 2019 and 2020 data
             } else if (strChoice.equals("7")){
@@ -407,10 +407,10 @@ public class Simulator extends Application {
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
                 if (choice.equals("M")){
-                    endmenu = true; 
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     clearScreen();
+                    endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
                 }
@@ -522,9 +522,6 @@ public class Simulator extends Application {
         primaryStage.show();
        
     }
-
-
-
 }
 
 
