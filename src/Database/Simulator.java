@@ -8,7 +8,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Simulator extends Application {
+public class Simulator extends Application{
 
     // Initialize static variables for charts
     static double EM1901;   
@@ -40,7 +40,7 @@ public class Simulator extends Application {
     static int chart; 
 
     // Method to pause console
-    private static void pause(int pauseLength) {
+    private static void pause(int pauseLength){
         try {
             Thread.sleep(pauseLength);
         } catch (InterruptedException e) {
@@ -76,7 +76,7 @@ public class Simulator extends Application {
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));      
         
         // While loop to read the data set
-        while(count < 480){
+        while (count < 480) {
 
             // Read the csv file and split each array element by comma
             line = file.readLine();
@@ -126,7 +126,7 @@ public class Simulator extends Application {
             System.out.println("-----------------------------------------------\n");
 
             // Allows user to view data sorted by province 
-            if (strChoice.equals("1")){
+            if (strChoice.equals("1")) {
                 System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                 System.out.print("Input Province (case sensitive): ");
                 choice = key.readLine();
@@ -136,7 +136,7 @@ public class Simulator extends Application {
                 
                 // Convert string to arraylist and print out 
                 ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
-                for(int i = 0; i < list.size(); i++){
+                for (int i = 0; i < list.size(); i++) {
                     System.out.println(list.get(i).toString());
                 }
                 
@@ -153,7 +153,7 @@ public class Simulator extends Application {
                 }
                 
             // Allows user to view by labour type 
-            } else if (strChoice.equals("2")){
+            } else if (strChoice.equals("2")) {
                 System.out.println("Enter the Labour Type\n- Employment\n- Unemployment");
                 System.out.print("Input Labour Type (case sensitive): ");
                 choice = key.readLine();
@@ -167,16 +167,16 @@ public class Simulator extends Application {
                     System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
                     System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                     ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
-                    for(int i = 0; i < list.size(); i++){
+                    for (int i = 0; i < list.size(); i++) {
                         System.out.println(list.get(i).toString());
                     }
                 
-                } else if (choice.equals("Unemployment")){
+                } else if (choice.equals("Unemployment")) {
                     str = DataInteraction.laboursearch(datareader, choice).toString().replace("[", " ").replace("]", "");
                     System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
                     System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                     ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
-                    for(int i = 0; i < list.size(); i++){
+                    for (int i = 0; i < list.size(); i++) {
                         System.out.println(list.get(i).toString());
                     }
                 }
@@ -184,16 +184,16 @@ public class Simulator extends Application {
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
-                if (choice.equals("M")){
+                if (choice.equals("M")) {
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     endmenu = true; 
-                } else if (choice.equals("X")){
+                } else if (choice.equals("X")) {
                     endmenu = false;
                 }
             
             // Allows use to view data sorted by population 
-            } else if (strChoice.equals("3")){
+            } else if (strChoice.equals("3")) {
                 System.out.println("(1) Sort by lowest to highest\n(2) Sort by highest to lowest");
                 System.out.print("Input choice: ");
                 choice = key.readLine();
@@ -201,14 +201,14 @@ public class Simulator extends Application {
                 System.out.println("DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));                
                
                 // Sorts data from lowest to highest 
-                if (choice.equals("1")){
+                if (choice.equals("1")) {
                    DataInteraction.sortLow(datareader);
                    for (int i = 0; i < datareader.length; i++) {
                         System.out.println(datareader[i]);
                    }
                 
                 // Sorts data from highest to lowest 
-                } else if (choice.equals("2")){
+                } else if (choice.equals("2")) {
                     DataInteraction.sortHigh(datareader);
                     for (int i = 0; i < datareader.length; i++) {
                         System.out.println(datareader[i]);
@@ -218,39 +218,39 @@ public class Simulator extends Application {
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
-                if (choice.equals("M")){
+                if (choice.equals("M")) {
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     endmenu = true; 
-                } else if (choice.equals("X")){
+                } else if (choice.equals("X")) {
                     endmenu = false;
                 }
                
             // Sorts data by sex 
-            } else if (strChoice.equals("4")){
+            } else if (strChoice.equals("4")) {
                 System.out.print("Enter sex (Males, Females): ");
                 choice = key.readLine();
                 str = DataInteraction.sexsearch(datareader, choice).toString().replace("[", " ").replace("]", "");
                 System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
                 System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                 ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
-                for(int i = 0; i < list.size(); i++){
+                for (int i = 0; i < list.size(); i++) {
                     System.out.println(list.get(i).toString());
                 }
 
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
-                if (choice.equals("M")){
+                if (choice.equals("M")) {
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     endmenu = true; 
-                } else if (choice.equals("X")){
+                } else if (choice.equals("X")) {
                     endmenu = false;
                 }
 
             // Sorts data with multiple filters 
-            } else if (strChoice.equals("5")){
+            } else if (strChoice.equals("5")) {
                 boolean endmenu2 = true; 
                 str ="";
 
@@ -319,16 +319,16 @@ public class Simulator extends Application {
                 // option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
-                if (choice.equals("M")){
+                if (choice.equals("M")) {
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     endmenu = true; 
-                } else if (choice.equals("X")){
+                } else if (choice.equals("X")) { 
                     endmenu = false;
                 }
 
             // View individual records 
-            } else if (strChoice.equals("6")){
+            } else if (strChoice.equals("6")) {
                 System.out.println("To view an individual record, enter all the following data");
                 System.out.print("Enter a date:\n- 2019-01\n- 2019-05\n- 2019-09\n- 2020-01\n- 2020-05\n- 2020-09\nInput Choice: ");
                 date2 = key.readLine();
@@ -346,16 +346,16 @@ public class Simulator extends Application {
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
-                if (choice.equals("M")){
+                if (choice.equals("M")) {
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     endmenu = true; 
-                } else if (choice.equals("X")){
+                } else if (choice.equals("X")) {
                     endmenu = false;
                 }
 
             // View summary report to compare 2019 and 2020 data
-            } else if (strChoice.equals("7")){
+            } else if (strChoice.equals("7")) {
                 System.out.println("\n----------------------------------------- Summary Report -----------------------------------------");
                 System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
                 System.out.println("All data is presented in population x1,000");
@@ -402,16 +402,16 @@ public class Simulator extends Application {
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
-                if (choice.equals("M")){
+                if (choice.equals("M")) {
                     System.out.println("Returning to Main Menu...");
                     pause(500);
                     endmenu = true; 
-                } else if (choice.equals("X")){
+                } else if (choice.equals("X")) {
                     endmenu = false;
                 }
             
             // View three different charts based on data 
-            } else if (strChoice.equals("8")){
+            } else if (strChoice.equals("8")) {
                 System.out.print("(1) For line chart\n(2) For table view\n(3) For bar graph\nInput Choice: ");
                 choice  = key.readLine();
 
