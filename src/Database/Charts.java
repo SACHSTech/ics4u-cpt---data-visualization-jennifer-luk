@@ -30,7 +30,7 @@ public class Charts extends Application {
         
         // Set x-axis and y-axis
         xAxis2 = new CategoryAxis();
-        yAxis2 = new NumberAxis("Population x1,000", 0.0, 1200.00, 100.00);
+        yAxis2 = new NumberAxis("Population x1,000", 0.0, 1100.00, 100.00);
         linechart = new LineChart<>(xAxis2, yAxis2);
         
         // Setup chart title and labels

@@ -102,7 +102,7 @@ public class Simulator extends Application {
 
         // main menu outprint 
         System.out.println("\nWelcome to the Stats Canada Labour Force Characteristics System");
-        System.out.println("The following database contains data from January 2019 to September 2020, with records measured on a 4 month basis.\n");
+        System.out.println("The following database contains data from January 2019 to September 2020, with records measured on a 4 month basis.");
         
         // loop for main menu 
         boolean endmenu = true;  
@@ -110,7 +110,8 @@ public class Simulator extends Application {
             endmenu = true; 
 
             // Present main menu choices
-            System.out.println("Please select one of the options below: ");
+            System.out.println("-----------------------------------------------");
+            System.out.println("\nPlease select one of the options below: ");
             System.out.println("\n(1) View Data Sorted by Province");
             System.out.println("(2) View Data Sorted by Labour Type");
             System.out.println("(3) View Data Sorted by Population");
@@ -122,14 +123,16 @@ public class Simulator extends Application {
 
             System.out.print("Input Choice: ");
             String strChoice = key.readLine();
-            
+            System.out.println("-----------------------------------------------\n");
+
             // Allows user to view data sorted by province 
             if (strChoice.equals("1")){
                 System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
-                System.out.println("Input Province (case sensitive): ");
+                System.out.print("Input Province (case sensitive): ");
                 choice = key.readLine();
-                str = DataInteraction.provincesearch(datareader, choice).toString();
-                System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
+                str = DataInteraction.provincesearch(datareader, choice).toString().replace("[", " ").replace("]", "");
+                System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
+                System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                 
                 // Convert string to arraylist and print out 
                 ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
@@ -157,19 +160,21 @@ public class Simulator extends Application {
 
                 // Filters by the labour type user inputs 
                 if (choice.equals("Employment")) {
-                    System.out.println("Choose a filter to view data by:\n- Employment\n- Part-time employment\n- Full-time employment");
+                    System.out.println("\nChoose a filter to view data by:\n- Employment\n- Part-time employment\n- Full-time employment");
                     System.out.print("Input Filter (case sensitive): ");
                     choice = key.readLine();
-                    str = DataInteraction.laboursearch(datareader, choice).toString();
-                    System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
+                    str = DataInteraction.laboursearch(datareader, choice).toString().replace("[", " ").replace("]", "");
+                    System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
+                    System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                     ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                     for(int i = 0; i < list.size(); i++){
                         System.out.println(list.get(i).toString());
                     }
                 
                 } else if (choice.equals("Unemployment")){
-                    str = DataInteraction.laboursearch(datareader, choice).toString();
-                    System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
+                    str = DataInteraction.laboursearch(datareader, choice).toString().replace("[", " ").replace("]", "");
+                    System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
+                    System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                     ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                     for(int i = 0; i < list.size(); i++){
                         System.out.println(list.get(i).toString());
@@ -189,11 +194,12 @@ public class Simulator extends Application {
             
             // Allows use to view data sorted by population 
             } else if (strChoice.equals("3")){
-                System.out.print("(1) Sort by lowest to highest\n(2) Sort by highest to lowest");
+                System.out.println("(1) Sort by lowest to highest\n(2) Sort by highest to lowest");
+                System.out.print("Input choice: ");
                 choice = key.readLine();
-                
-                System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
-                
+                System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
+                System.out.println("DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));                
+               
                 // Sorts data from lowest to highest 
                 if (choice.equals("1")){
                    DataInteraction.sortLow(datareader);
@@ -224,8 +230,9 @@ public class Simulator extends Application {
             } else if (strChoice.equals("4")){
                 System.out.print("Enter sex (Males, Females): ");
                 choice = key.readLine();
-                str = DataInteraction.sexsearch(datareader, choice).toString();
-                System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
+                str = DataInteraction.sexsearch(datareader, choice).toString().replace("[", " ").replace("]", "");
+                System.out.println("\n----------------------------------------- Sorted Data -----------------------------------------");
+                System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
                 ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                 for(int i = 0; i < list.size(); i++){
                     System.out.println(list.get(i).toString());
@@ -259,11 +266,13 @@ public class Simulator extends Application {
                 // Continues to loop multiple filters menu until user stops 
                 while (endmenu2) {
 
-                    System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Stop Filtering\n");
-                    choice= key.readLine();
+                    System.out.println("\nApply Filters");
+                    System.out.println("(1) Filter by Date\n(2) Filter by Province\n(3) Filter by Labour Type\n(4) Filter by Sex\n(5) Stop Filtering");
+                    System.out.print("Input Filter Choice: ");
+                    choice = key.readLine();
                     if (choice.equals("1")) {
                         temporary.clear();
-                        System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
+                        System.out.println("\nEnter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
                         temporary.addAll(DataInteraction.datesearch(array, date2));
                         j = j/6;
@@ -271,7 +280,7 @@ public class Simulator extends Application {
                     
                     } else if (choice.equals("2")) {
                         temporary.clear();
-                        System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
+                        System.out.println("\nEnter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                         name = key.readLine();
                         temporary.addAll(DataInteraction.provincesearch(array, name));
                         j = j/10;
@@ -279,7 +288,7 @@ public class Simulator extends Application {
                      
                     } else if (choice.equals("3")) {
                         temporary.clear();
-                        System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
+                        System.out.println("\nEnter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
                         temporary.addAll(DataInteraction.laboursearch(array, labourtype));
                         j = j/4;
@@ -287,18 +296,17 @@ public class Simulator extends Application {
 
                      } else if (choice.equals("4")) {
                         temporary.clear();
-                        System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
+                        System.out.println("\nEnter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
                         temporary.addAll(DataInteraction.sexsearch(array, sex2));
                         j = j/2;
                         array = temporary.toArray(new DataReader[j]);
                      
                      } else if (choice.equals("5")) {
-                        System.out.println("Processing filters...");
+                        System.out.println("\nProcessing filters...\n");
                         pause(500);
-                        System.out.println("------------------- Filtered Data -------------------");
-                        System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
-                        str = Arrays.toString(temporary.toArray()).replace("[", " ").replace("]", "");
+                        System.out.println("\n----------------------------------------- Filtered Data -----------------------------------------");
+                        System.out.println(" DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));                        str = Arrays.toString(temporary.toArray()).replace("[", " ").replace("]", "");
                         ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split(",")));
                         for(int i = 0; i < list.size(); i++){
                             System.out.println(list.get(i).toString());
@@ -322,18 +330,19 @@ public class Simulator extends Application {
             // View individual records 
             } else if (strChoice.equals("6")){
                 System.out.println("To view an individual record, enter all the following data");
-                System.out.println("Enter a date\n- 2019-01\n- 2019-05\n- 2019-09\n- 2020-01\n- 2020-05\n- 2020-09: ");
+                System.out.print("Enter a date:\n- 2019-01\n- 2019-05\n- 2019-09\n- 2020-01\n- 2020-05\n- 2020-09\nInput Choice: ");
                 date2 = key.readLine();
-                System.out.println("\nEnter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
+                System.out.print("\nEnter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan\nInput Choice: ");
                 name = key.readLine();
-                System.out.println("\nEnter labour type (Case sensitive)\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
+                System.out.print("\nEnter labour type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment\nInput Choice: ");
                 labourtype = key.readLine(); 
-                System.out.println("\nEnter sex (Case sensitive)\n- Males\n- Females");
+                System.out.print("\nEnter sex (Case sensitive):\n- Males\n- Females\nInput Choice: ");
                 sex2 = key.readLine();
 
-                System.out.println("\nDATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
+                System.out.println("\n----------------------------------------- Individual Record -----------------------------------------");
+                System.out.println("DATE         " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));                
                 DataInteraction.IndRecordSearch(datareader, date2, name, labourtype, sex2);
-                
+
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
@@ -347,8 +356,7 @@ public class Simulator extends Application {
 
             // View summary report to compare 2019 and 2020 data
             } else if (strChoice.equals("7")){
-                System.out.println("------------------- Summary Report -------------------");
-                System.out.println("Total number of records: " + datareader.length);
+                System.out.println("\n----------------------------------------- Summary Report -----------------------------------------");
                 System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
                 System.out.println("All data is presented in population x1,000");
                 System.out.println("\n----------- 2019 Summary -----------");
@@ -404,7 +412,7 @@ public class Simulator extends Application {
             
             // View three different charts based on data 
             } else if (strChoice.equals("8")){
-                System.out.println("(1) For line chart\n(2) For table view\n(3) For bar graph");
+                System.out.print("(1) For line chart\n(2) For table view\n(3) For bar graph\nInput Choice: ");
                 choice  = key.readLine();
 
                 // Allows use to view a line chart about the average male and female employment vs unmployment from Jan 2019 - Sep 2020
