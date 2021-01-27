@@ -70,7 +70,7 @@ public class Charts extends Application {
         linechart.getData().add(series3);
 
         XYChart.Series<String, Number> series4 = new XYChart.Series<>();
-        series4.setName("Unemployed Males");
+        series4.setName("Unemployed Females");
         series4.getData().add(new XYChart.Data<String, Number>(CATEGORIES[0], UNF1901));
         series4.getData().add(new XYChart.Data<String, Number>(CATEGORIES[1], UNF1905));
         series4.getData().add(new XYChart.Data<String, Number>(CATEGORIES[2], UNF1909));

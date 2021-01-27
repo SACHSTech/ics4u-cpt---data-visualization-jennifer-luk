@@ -48,11 +48,6 @@ public class Simulator extends Application {
         }
     }
 
-    // Method to clear screen
-    public static void clearScreen() {  
-        System.out.print("\033[H\033[2J");  
-        System.out.flush();  
-    }  
     public static void main(String[] args) throws IOException{
 
         // Initialize variables
@@ -127,12 +122,11 @@ public class Simulator extends Application {
 
             System.out.print("Input Choice: ");
             String strChoice = key.readLine();
-            clearScreen();
             
             // Allows user to view data sorted by province 
             if (strChoice.equals("1")){
                 System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
-                System.out.print("Input Province (case sensitive): ");
+                System.out.println("Input Province (case sensitive): ");
                 choice = key.readLine();
                 str = DataInteraction.provincesearch(datareader, choice).toString();
                 System.out.println("DATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
@@ -146,12 +140,12 @@ public class Simulator extends Application {
                 // Option to continue viewing other menu options or end program 
                 System.out.println("\n(M) Main Menu\n(X) Exit Database");
                 choice = key.readLine();
-                if (choice.equals("M")){
+                if (choice.equals("M")) {
                     System.out.println("Returning to Main Menu...");
-                    pause(500);
-                    clearScreen();
+                    pause(1500);
                     endmenu = true; 
-                } else if (choice.equals("X")){
+                    
+                } else if (choice.equals("X")) {
                     endmenu = false;
                 }
                 
@@ -188,7 +182,6 @@ public class Simulator extends Application {
                 if (choice.equals("M")){
                     System.out.println("Returning to Main Menu...");
                     pause(500);
-                    clearScreen();
                     endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
@@ -222,7 +215,6 @@ public class Simulator extends Application {
                 if (choice.equals("M")){
                     System.out.println("Returning to Main Menu...");
                     pause(500);
-                    clearScreen();
                     endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
@@ -245,7 +237,6 @@ public class Simulator extends Application {
                 if (choice.equals("M")){
                     System.out.println("Returning to Main Menu...");
                     pause(500);
-                    clearScreen();
                     endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
@@ -275,32 +266,32 @@ public class Simulator extends Application {
                         System.out.println("Enter a date (2019-01, 2019-05, 2019-09, 2020-01, 2020-05, 2020-09): ");
                         date2 = key.readLine();
                         temporary.addAll(DataInteraction.datesearch(array, date2));
-                        array = temporary.toArray(new DataReader[j/6]);
                         j = j/6;
+                        array = temporary.toArray(new DataReader[j]);
                     
                     } else if (choice.equals("2")) {
                         temporary.clear();
                         System.out.println("Enter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                         name = key.readLine();
                         temporary.addAll(DataInteraction.provincesearch(array, name));
-                        array = temporary.toArray(new DataReader[j/10]);  
                         j = j/10;
+                        array = temporary.toArray(new DataReader[j]);  
                      
                     } else if (choice.equals("3")) {
                         temporary.clear();
                         System.out.println("Enter the Labour Type (Case sensitive):\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                         labourtype = key.readLine();
                         temporary.addAll(DataInteraction.laboursearch(array, labourtype));
-                        array = temporary.toArray(new DataReader[j/4]);
                         j = j/4;
+                        array = temporary.toArray(new DataReader[j]);
 
                      } else if (choice.equals("4")) {
                         temporary.clear();
                         System.out.println("Enter sex (Case Sensitive): \n- Males\n- Females");
                         sex2 = key.readLine();
                         temporary.addAll(DataInteraction.sexsearch(array, sex2));
-                        array = temporary.toArray(new DataReader[j/2]);
                         j = j/2;
+                        array = temporary.toArray(new DataReader[j]);
                      
                      } else if (choice.equals("5")) {
                         System.out.println("Processing filters...");
@@ -315,7 +306,6 @@ public class Simulator extends Application {
                        
                         endmenu2 = false; 
                     }
-                    clearScreen();
                 }
 
                 // option to continue viewing other menu options or end program 
@@ -324,7 +314,6 @@ public class Simulator extends Application {
                 if (choice.equals("M")){
                     System.out.println("Returning to Main Menu...");
                     pause(500);
-                    clearScreen();
                     endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
@@ -333,13 +322,13 @@ public class Simulator extends Application {
             // View individual records 
             } else if (strChoice.equals("6")){
                 System.out.println("To view an individual record, enter all the following data");
-                System.out.println("Enter a date\n- 2019-01\n- 2019-05\n- 2019-09\n- 2020-01\n- 2020-05\n- 2020-09): ");
+                System.out.println("Enter a date\n- 2019-01\n- 2019-05\n- 2019-09\n- 2020-01\n- 2020-05\n- 2020-09: ");
                 date2 = key.readLine();
                 System.out.println("\nEnter province name (Case sensitive):\n- Alberta\n- British Columbia\n- Manitoba\n- New Brunswick\n- Newfoundland and Labrador\n- Nova Scotia\n- Ontario\n- Prince Edward Island\n- Quebec\n- Saskatchewan");
                 name = key.readLine();
-                System.out.println("\nEnter labour type (Case sensitive)\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment)");
+                System.out.println("\nEnter labour type (Case sensitive)\n- Employment\n- Part-time employment\n- Full-time employment\n- Unemployment");
                 labourtype = key.readLine(); 
-                System.out.println("\nEnter sex (Case sensitive)\n- Males\n- Females):");
+                System.out.println("\nEnter sex (Case sensitive)\n- Males\n- Females");
                 sex2 = key.readLine();
 
                 System.out.println("\nDATE          " + ("PROVINCE                               ").substring(0,27) + ("LABOUR TYPE                                   ").substring(0,24) + ("SEX                                  ").substring(0,12) + ("POPULATION x1,000"));
@@ -351,7 +340,6 @@ public class Simulator extends Application {
                 if (choice.equals("M")){
                     System.out.println("Returning to Main Menu...");
                     pause(500);
-                    clearScreen();
                     endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
@@ -362,7 +350,7 @@ public class Simulator extends Application {
                 System.out.println("------------------- Summary Report -------------------");
                 System.out.println("Total number of records: " + datareader.length);
                 System.out.println("Total number of provinces recorded: " + (datareader.length/6/8));
-                System.out.println("All data is presented in population x1,1000");
+                System.out.println("All data is presented in population x1,000");
                 System.out.println("\n----------- 2019 Summary -----------");
 
                 // Prints out average employment and unemployments depending on sex
@@ -409,7 +397,6 @@ public class Simulator extends Application {
                 if (choice.equals("M")){
                     System.out.println("Returning to Main Menu...");
                     pause(500);
-                    clearScreen();
                     endmenu = true; 
                 } else if (choice.equals("X")){
                     endmenu = false;
@@ -417,7 +404,7 @@ public class Simulator extends Application {
             
             // View three different charts based on data 
             } else if (strChoice.equals("8")){
-                System.out.println("(1)For line chart\n(2) For table view\n(3) For bar graph");
+                System.out.println("(1) For line chart\n(2) For table view\n(3) For bar graph");
                 choice  = key.readLine();
 
                 // Allows use to view a line chart about the average male and female employment vs unmployment from Jan 2019 - Sep 2020
@@ -496,7 +483,6 @@ public class Simulator extends Application {
             } else {
                 System.out.println("Invalid Input. Please try again.");
                 pause(500);
-                clearScreen();
             }
         }
         
